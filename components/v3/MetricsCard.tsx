@@ -2,6 +2,7 @@ import { FaMapPin, FaProjectDiagram } from "react-icons/fa";
 import { HiEmojiHappy } from "react-icons/hi";
 import { PiShootingStarFill } from "react-icons/pi";
 import { IconBadge } from "../ui/IconBadge";
+import { Fragment } from "react/jsx-runtime";
 
 const metrics = [
     {
@@ -23,7 +24,7 @@ const metrics = [
 
 export default function MetricsCard() {
     return (
-        <>
+        <Fragment>
             <div className="hidden xl:block xl:row-span-2 xl:col-start-3 bg-card-background rounded-2xl border-2 border-light-text/10">
                 <div className="py-2 flex flex-col justify-center items-center h-full">
                     <div className="text-[65px] font-bold text-center text-transparent bg-clip-text bg-linear-to-b from-gray-100 to-gray-400 drop-shadow-lg">
@@ -109,6 +110,6 @@ export default function MetricsCard() {
                     </div>
                 </div>
             </div>
-        </>
+        </Fragment>
     );
 }
