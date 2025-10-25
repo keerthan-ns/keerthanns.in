@@ -1,6 +1,4 @@
-import { FaMapPin } from "react-icons/fa";
-import { IconBadge } from "../ui/IconBadge";
-import { CardShell } from "./CardShell";
+
 
 export default function Advanced() {
     return (
