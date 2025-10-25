@@ -1,13 +1,23 @@
-import { BentoGridThirdDemo } from "@/components/test";
-import Image from "next/image";
+import { BentoGrid, BentoGridItem } from "@/components/ui/bento-grid";
+import { FaHtml5, FaCss3Alt, FaPhp, FaJava, FaLaravel } from "react-icons/fa";
+import { SiMysql, SiMongodb } from "react-icons/si";
+import { BsPersonFill, BsFlagFill } from "react-icons/bs";
+import { MdOutlineWork, MdOutlineReviews, MdOutlineCollectionsBookmark } from "react-icons/md";
+import { AiOutlineDownload } from "react-icons/ai";
+import PageLayout from "./layout/PageLayout";
+import Column1 from "@/components/columns/Column1";
+import Column2 from "@/components/columns/Column2";
+import Column3 from "@/components/columns/Column3";
+import Advanced from "@/components/Advanced";
+import Previous from "@/components/Previous";
+import V1 from "./v1/page";
+import V2 from "./v2/page";
 
 export default function Home() {
   return (
-    <div className="flex min-h-screen items-center justify-center bg-zinc-50 font-sans dark:bg-black">
-      {/* <main className="flex min-h-screen w-full max-w-3xl flex-col items-center justify-between py-32 px-16 bg-white dark:bg-black sm:items-start"> */}
-      
-        <BentoGridThirdDemo/>
-      {/* </main> */}
-    </div>
+    <>
+    <V1 />
+    <V2 />
+    </>
   );
 }
