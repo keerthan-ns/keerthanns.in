@@ -80,61 +80,57 @@ export default function MetricsCard() {
             </div>
             <div className="flex justify-between items-center gap-1 xl:hidden">
                 <div className="xl:row-span-2 xl:col-start-3 bg-card-background rounded-2xl border-2 border-light-text/10 h-36">
-                    <div className="py-2 flex flex-col justify-center items-center h-full">
+                    <div className="py-2 px-1 flex flex-col justify-center items-center h-full">
                         <div className="flex justify-center items-center gap-[1px]">
-                        {/* <h2
+                            {/* <h2
                     className="counter-projects min-w-[1ch] text-center transition-transform duration-300 font-medium text-light-text text-[65px] leading-tight"
                             data-target="11">11</h2> <span className="text-theme-primary font-medium text-5xl">+</span> */}
-                        <div className="text-[40px] font-bold text-center text-transparent bg-clip-text bg-linear-to-b from-gray-100 to-gray-400 drop-shadow-lg">
-                            30+
+                            <div className="text-[40px] font-bold text-center text-transparent bg-clip-text bg-linear-to-b from-gray-100 to-gray-400 drop-shadow-lg">
+                                30+
+                            </div>
                         </div>
-                    </div>
-                    <IconBadge
-                        icon={<FaProjectDiagram className="text-primary" />}
-                        text={"Webapps Built"}
-                        className="bg-gray-600/10 text-xs font-normal text-white border  px-2 py-1 rounded-full"
-                        iconSize={20}
-                    />
+                        <IconBadge
+                            icon={<FaProjectDiagram className="text-primary" />}
+                            text={"Webapps Built"}
+                            className="bg-gray-600/10 text-xs font-normal text-white border  px-2 py-1 rounded-full"
+                            iconSize={20}
+                        />
                     </div>
                 </div>
                 <div className="xl:row-span-2 xl:col-start-4 bg-card-background rounded-2xl border-2 border-light-text/10 h-36">
-                    <div className="py-2 flex flex-col justify-center items-center h-full">
-                        <div className="py-2 flex flex-col justify-center items-center h-full">
-                    {/* <div className="flex justify-center items-center gap-[1px]">
+                    <div className="py-2 px-1 flex flex-col justify-center items-center h-full">
+                            {/* <div className="flex justify-center items-center gap-[1px]">
                         <h2
                             className="counter-clients min-w-[1ch] text-center transition-transform duration-300 font-medium text-light-text text-[65px] leading-tight"
                             data-target="29">29</h2> <span className="text-theme-primary font-medium text-5xl">+</span>
                     </div> */}
-                    <div className="text-[40px] font-bold text-center text-transparent bg-clip-text bg-linear-to-b from-gray-100 to-gray-400 drop-shadow-lg">
-                        03+
-                    </div>
-                    <IconBadge
-                        icon={<HiEmojiHappy className="text-primary" />}
-                        text={"Happy Clients"}
-                        className="bg-gray-600/10 text-xs font-normal text-white border  px-2 py-1 rounded-full"
-                        iconSize={20}
-                    />
-                </div>
+                            <div className="text-[40px] font-bold text-center text-transparent bg-clip-text bg-linear-to-b from-gray-100 to-gray-400 drop-shadow-lg">
+                                03+
+                            </div>
+                            <IconBadge
+                                icon={<HiEmojiHappy className="text-primary" />}
+                                text={"Happy Clients"}
+                                className="bg-gray-600/10 text-xs font-normal text-white border  px-2 py-1 rounded-full"
+                                iconSize={20}
+                            />
                     </div>
                 </div>
                 <div className="xl:row-span-2 xl:col-start-5 bg-card-background rounded-2xl border-2 border-light-text/10 h-36">
-                    <div className="py-2 flex flex-col justify-center items-center h-full">
-                        <div className="py-2 flex flex-col justify-center items-center h-full">
-                    {/* <div className="flex justify-center items-center gap-[1px]">
+                    <div className="py-2 px-1 flex flex-col justify-center items-center h-full">
+                            {/* <div className="flex justify-center items-center gap-[1px]">
                         <h2
                             className="counter-expertise min-w-[1ch] text-center transition-transform duration-300 font-medium text-light-text text-[65px] leading-tight"
                             data-target="07">07</h2> <span className="text-theme-primary font-medium text-5xl">+</span>
                     </div> */}
-                    <div className="text-[40px] font-bold text-center text-transparent bg-clip-text bg-linear-to-b from-gray-100 to-gray-400 drop-shadow-lg">
-                        04+
-                    </div>
-                    <IconBadge
-                        icon={<PiShootingStarFill className="text-primary" />}
-                        text={"Years Expertise"}
-                        className="bg-gray-600/10 text-xs font-normal text-white border  px-2 py-1 rounded-full"
-                        iconSize={20}
-                    />
-                </div>
+                            <div className="text-[40px] font-bold text-center text-transparent bg-clip-text bg-linear-to-b from-gray-100 to-gray-400 drop-shadow-lg">
+                                04+
+                            </div>
+                            <IconBadge
+                                icon={<PiShootingStarFill className="text-primary" />}
+                                text={"Years Expertise"}
+                                className="bg-gray-600/10 text-xs font-normal text-white border  px-2 py-1 rounded-full"
+                                iconSize={20}
+                            />
                     </div>
                 </div>
             </div>
