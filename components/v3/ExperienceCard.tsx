@@ -14,6 +14,9 @@ export default function ExperienceCard() {
     const [showArrow, setShowArrow] = useState(false);
     const [showKnowMore, setShowKnowMore] = useState(false);
 
+    // Determine if device is touch capable
+    const isTouchDevice = typeof window !== "undefined" && ('ontouchstart' in window || navigator.maxTouchPoints > 0);
+
     const handleScroll = () => {
         const el = scrollRef.current;
         if (!el) return;
@@ -23,19 +26,19 @@ export default function ExperienceCard() {
         setShowKnowMore(atBottom);
     };
 
+    // Track scroll changes
     useEffect(() => {
-        if (isHovered) {
-            handleScroll();
-        }
-    }, [isHovered]);
+        // If mobile/touch, immediately check scroll
+        if (isTouchDevice) handleScroll();
+    }, [isTouchDevice]);
 
     return (
         <div
             className="xl:col-span-2 xl:row-span-3 xl:row-start-4 bg-card-background rounded-2xl border-2 border-light-text/10"
-            onMouseEnter={() => setIsHovered(true)}
-            onMouseLeave={() => setIsHovered(false)}
-            onFocus={() => setIsHovered(true)}
-            onBlur={() => setIsHovered(false)}
+            onMouseEnter={() => !isTouchDevice && setIsHovered(true)}
+            onMouseLeave={() => !isTouchDevice && setIsHovered(false)}
+            onFocus={() => !isTouchDevice && setIsHovered(true)}
+            onBlur={() => !isTouchDevice && setIsHovered(false)}
             tabIndex={0}
         >
             <div className="pt-4 pb-2 relative">
@@ -92,10 +95,12 @@ export default function ExperienceCard() {
                         </div>
                     ))}
                 </div>
+
                 <div className="pointer-events-none absolute left-0 bottom-0 w-full h-12 bg-linear-to-t from-black/60 to-transparent rounded-b-2xl z-10" />
+
                 <button
                     className={`cursor-pointer absolute bottom-4 right-4 z-20 bg-slate-400/30 text-white rounded-full p-2 shadow-lg transition-opacity duration-500 hover:bg-slate-700 
-                        ${isHovered && showArrow ? "opacity-100 pointer-events-auto" : "opacity-0 pointer-events-none"}`}
+                        ${(isHovered || isTouchDevice) && showArrow ? "opacity-100 pointer-events-auto" : "opacity-0 pointer-events-none"}`}
                     onClick={() => {
                         if (scrollRef.current) {
                             scrollRef.current.scrollBy({ top: 80, behavior: "smooth" });
@@ -106,10 +111,11 @@ export default function ExperienceCard() {
                 >
                     <IoIosArrowDown />
                 </button>
+
                 <Link
                     href="/about"
                     className={`absolute bottom-4 left-1/2 transform -translate-x-1/2 bg-primary font-medium text-sm text-white rounded p-2 shadow-lg transition-opacity duration-500 hover:bg-primary/90
-                        ${isHovered && showKnowMore ? "opacity-100 pointer-events-auto" : "opacity-0 pointer-events-none"}`}
+                        ${(isHovered || isTouchDevice) && showKnowMore ? "opacity-100 pointer-events-auto" : "opacity-0 pointer-events-none"}`}
                 >
                     Know More
                 </Link>
