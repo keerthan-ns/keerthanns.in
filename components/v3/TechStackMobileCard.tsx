@@ -1,116 +1,113 @@
 "use client"
 
-import { FaSuitcase } from "react-icons/fa6";
 import { IconBadge } from "../ui/IconBadge";
 import Image from "next/image";
 import { useRef, useState, useEffect, Fragment } from "react";
 import { IoIosArrowDown } from "react-icons/io";
-import { experiences } from "@/data";
 import Link from "next/link";
+import { BsStack } from "react-icons/bs";
 
 export default function TechStackMobileCard() {
+    const scrollRef = useRef<HTMLDivElement>(null);
+    const [isHovered, setIsHovered] = useState(false);
+    const [showArrow, setShowArrow] = useState(false);
+    const [showViewMore, setShowViewMore] = useState(false);
+
+    // Detect touch device
+    const isTouchDevice = typeof window !== "undefined" && ('ontouchstart' in window || navigator.maxTouchPoints > 0);
+
+    const handleScroll = () => {
+        const el = scrollRef.current;
+        if (!el) return;
+
+        const atBottom = el.scrollTop + el.clientHeight >= el.scrollHeight - 1;
+        setShowArrow(!atBottom);
+        setShowViewMore(atBottom);
+    };
+
+    // Track scroll changes
+    useEffect(() => {
+        // If mobile/touch, immediately check scroll
+        if (isTouchDevice) handleScroll();
+    }, [isTouchDevice]);
+  
     return (
         <Fragment>
-            <div className="xl:hidden xl:col-span-2 xl:row-span-3 bg-card-background rounded-2xl border-2 border-light-text/10">
-              <div className="pt-4 pb-2">
-                <div className="">
-                  <div className="flex justify-center items-center gap-2"> <svg className="text-theme-primary size-5"
-                    xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
-                    <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
-                    <path
-                      d="M20.894 15.553a1 1 0 0 1 -.447 1.341l-8 4a1 1 0 0 1 -.894 0l-8 -4a1 1 0 0 1 .894 -1.788l7.553 3.774l7.554 -3.775a1 1 0 0 1 1.341 .447m0 -4a1 1 0 0 1 -.447 1.341l-8 4a1 1 0 0 1 -.894 0l-8 -4a1 1 0 0 1 .894 -1.788l7.552 3.775l7.554 -3.775a1 1 0 0 1 1.341 .447m-8.887 -8.552q .056 0 .111 .007l.111 .02l.086 .024l.012 .006l.012 .002l.029 .014l.05 .019l.016 .009l.012 .005l8 4a1 1 0 0 1 0 1.788l-8 4a1 1 0 0 1 -.894 0l-8 -4a1 1 0 0 1 0 -1.788l8 -4l.011 -.005l.018 -.01l.078 -.032l.011 -.002l.013 -.006l.086 -.024l.11 -.02l.056 -.005z">
-                    </path>
-                  </svg>
-                    <h2 className="font-medium text-light-text">My Stack</h2>
-                  </div>
-                  <p className="font-semibold text-[16px] text-dark-text">Tech Arsenal</p>
+            <div className="xl:hidden xl:col-span-2 xl:row-span-3 bg-card-background rounded-2xl border-2 border-light-text/10"
+                onMouseEnter={() => !isTouchDevice && setIsHovered(true)}
+                onMouseLeave={() => !isTouchDevice && setIsHovered(false)}
+                onFocus={() => !isTouchDevice && setIsHovered(true)}
+                onBlur={() => !isTouchDevice && setIsHovered(false)}
+                tabIndex={0}
+            >
+                <div className="pt-4 pb-2 relative">
+
+                    <div className="border-b-2 border-light-text/10 pb-2">
+                        <IconBadge
+                            icon={<BsStack className="text-primary" />}
+                            text={"Tech Stack"}
+                            className="py-2 font-medium"
+                            iconSize={18}
+                        />
+                        <p className="text-sm text-neutral-400">Technologies I&apos;ve Mastered</p>
+                    </div>
+
+                    <div
+                        ref={scrollRef}
+                        className="relative h-26 md:h-42 lg:h-42 xl:h-50 overflow-y-auto scrollbar-hide mt-2"
+                        onScroll={handleScroll}
+                    >
+                        <div className="select-none absolute flex flex-wrap justify-center items-center gap-2 pt-1 px-2 pb-14">
+                            {[
+                                { name: 'Java', src: '/static/stacks/java.svg' },
+                                { name: 'Typescript', src: '/static/stacks/typescript.svg' },
+                                { name: 'Next.js', src: '/static/stacks/nextjs.svg' },
+                                { name: 'ReactJs', src: '/static/stacks/react.svg' },
+                                { name: 'Tailwind', src: '/static/stacks/tailwind.svg' },
+                                { name: 'Spring boot', src: '/static/stacks/springboot.svg' },
+                                { name: 'NodeJs', src: '/static/stacks/nodejs.svg' },
+                                { name: 'Git', src: '/static/stacks/git.svg' },
+                                { name: 'Docker', src: '/static/stacks/docker.svg' },
+                                { name: 'Kubernetes', src: '/static/stacks/kubernetes.svg' },
+                                { name: 'Jenkins', src: '/static/stacks/jenkins.svg' },
+                            ].map((tech, idx) => (
+                                <article
+                                    key={idx}
+                                    className="flex justify-start items-center gap-1 rounded-lg shadow-md py-1 pl-1 pr-4 hover:bg-slate-400/20 transition-all duration-300"
+                                >
+                                    <Image width={10} height={10} src={tech.src} alt={tech.name} className="size-10" />
+                                    <h3 className="font-medium text-sm">{tech.name}</h3>
+                                </article>
+                            ))}
+                        </div>
+                    </div>
+
+                    {/* Gradient overlay */}
+                    <div className="pointer-events-none absolute left-0 bottom-0 w-full h-12 bg-linear-to-t from-black/60 to-transparent rounded-b-2xl z-10" />
+
+                    {/* Arrow button */}
+                    <button
+                        className={`cursor-pointer absolute bottom-4 right-4 z-20 bg-slate-400/30 text-white rounded-full p-2 shadow-lg transition-opacity duration-500 hover:bg-slate-700
+                            ${(isHovered || isTouchDevice) && showArrow ? "opacity-100 pointer-events-auto" : "opacity-0 pointer-events-none"}`}
+                        onClick={() => {
+                            if (scrollRef.current) {
+                                scrollRef.current.scrollBy({ top: 80, behavior: "smooth" });
+                            }
+                        }}
+                        aria-label="Scroll down"
+                        tabIndex={0}
+                    >
+                        <IoIosArrowDown />
+                    </button>
+                    <Link
+                        href="/about#tech-stack"
+                        className={`absolute bottom-4 left-1/2 transform -translate-x-1/2 bg-primary font-medium text-xs text-white rounded p-2 shadow-lg transition-opacity duration-500 hover:bg-primary/90
+                            ${(isHovered || isTouchDevice) && showViewMore ? "opacity-100 pointer-events-auto" : "opacity-0 pointer-events-none"}`}
+                    >
+                        View More
+                    </Link>
+
                 </div>
-                <div
-                  className="relative h-[6.5rem] md:h-[10.5rem] lg:h-[10.5rem] xl:h-[12.5rem] whitespace-nowrap overflow-y-auto scrollbar-hide mt-2">
-                  <div className="select-none absolute flex flex-wrap justify-center items-center gap-2 pt-1 px-2">
-                    <article
-                      className="undefined bg-icon-card rounded-lg shadow-md py-1 pl-1 pr-4  hover:bg-icon-background/80 transition-all duration-300">
-                      <div className="flex justify-start items-center gap-1">
-                        <article className="undefined bg-icon-background rounded-lg p-2 shadow-md"> <img
-                          src="https://skillicons.dev/icons?i=html" alt="Html" className="size-6" /> </article>
-                        <h3 className="font-medium text-sm text-light-text">Html</h3>
-                      </div>
-                    </article>
-                    <article
-                      className="undefined bg-icon-card rounded-lg shadow-md py-1 pl-1 pr-4  hover:bg-icon-background/80 transition-all duration-300">
-                      <div className="flex justify-start items-center gap-1">
-                        <article className="undefined bg-icon-background rounded-lg p-2 shadow-md"> <img
-                          src="https://skillicons.dev/icons?i=css" alt="Css" className="size-6" /> </article>
-                        <h3 className="font-medium text-sm text-light-text">Css</h3>
-                      </div>
-                    </article>
-                    <article
-                      className="undefined bg-icon-card rounded-lg shadow-md py-1 pl-1 pr-4  hover:bg-icon-background/80 transition-all duration-300">
-                      <div className="flex justify-start items-center gap-1">
-                        <article className="undefined bg-icon-background rounded-lg p-2 shadow-md"> <img
-                          src="https://skillicons.dev/icons?i=php" alt="PHP" className="size-6" /> </article>
-                        <h3 className="font-medium text-sm text-light-text">PHP</h3>
-                      </div>
-                    </article>
-                    <article
-                      className="undefined bg-icon-card rounded-lg shadow-md py-1 pl-1 pr-4  hover:bg-icon-background/80 transition-all duration-300">
-                      <div className="flex justify-start items-center gap-1">
-                        <article className="undefined bg-icon-background rounded-lg p-2 shadow-md"> <img
-                          src="https://skillicons.dev/icons?i=java" alt="Java" className="size-6" /> </article>
-                        <h3 className="font-medium text-sm text-light-text">Java</h3>
-                      </div>
-                    </article>
-                    <article
-                      className="undefined bg-icon-card rounded-lg shadow-md py-1 pl-1 pr-4  hover:bg-icon-background/80 transition-all duration-300">
-                      <div className="flex justify-start items-center gap-1">
-                        <article className="undefined bg-icon-background rounded-lg p-2 shadow-md"> <img
-                          src="https://skillicons.dev/icons?i=mysql" alt="MySQL" className="size-6" /> </article>
-                        <h3 className="font-medium text-sm text-light-text">MySQL</h3>
-                      </div>
-                    </article>
-                    <article
-                      className="undefined bg-icon-card rounded-lg shadow-md py-1 pl-1 pr-4  hover:bg-icon-background/80 transition-all duration-300">
-                      <div className="flex justify-start items-center gap-1">
-                        <article className="undefined bg-icon-background rounded-lg p-2 shadow-md"> <img
-                          src="https://skillicons.dev/icons?i=mongodb" alt="MongoDB" className="size-6" /> </article>
-                        <h3 className="font-medium text-sm text-light-text">MongoDB</h3>
-                      </div>
-                    </article>
-                    <article
-                      className="undefined bg-icon-card rounded-lg shadow-md py-1 pl-1 pr-4  hover:bg-icon-background/80 transition-all duration-300">
-                      <div className="flex justify-start items-center gap-1">
-                        <article className="undefined bg-icon-background rounded-lg p-2 shadow-md"> <img
-                          src="https://skillicons.dev/icons?i=laravel" alt="Laravel" className="size-6" /> </article>
-                        <h3 className="font-medium text-sm text-light-text">Laravel</h3>
-                      </div>
-                    </article>
-                    <article
-                      className="undefined bg-icon-card rounded-lg shadow-md py-1 pl-1 pr-4  hover:bg-icon-background/80 transition-all duration-300">
-                      <div className="flex justify-start items-center gap-1">
-                        <h3 className="font-medium text-sm text-light-text">Microsoft Office 365</h3>
-                      </div>
-                    </article>
-                    <article
-                      className="undefined bg-icon-card rounded-lg shadow-md py-1 pl-1 pr-4  hover:bg-icon-background/80 transition-all duration-300">
-                      <div className="flex justify-start items-center gap-1">
-                        <h3 className="font-medium text-sm text-light-text">Project management</h3>
-                      </div>
-                    </article>
-                    <article
-                      className="undefined bg-icon-card rounded-lg shadow-md py-1 pl-1 pr-4  hover:bg-icon-background/80 transition-all duration-300">
-                      <div className="flex justify-start items-center gap-1">
-                        <h3 className="font-medium text-sm text-light-text">Problem solving</h3>
-                      </div>
-                    </article>
-                    <article
-                      className="undefined bg-icon-card rounded-lg shadow-md py-1 pl-1 pr-4  hover:bg-icon-background/80 transition-all duration-300">
-                      <div className="flex justify-start items-center gap-1">
-                        <h3 className="font-medium text-sm text-light-text">Team work</h3>
-                      </div>
-                    </article>
-                  </div>
-                </div>
-              </div>
             </div>
         </Fragment>
     );
