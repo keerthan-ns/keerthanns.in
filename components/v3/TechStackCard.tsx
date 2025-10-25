@@ -107,7 +107,6 @@ export default function TechStackCard() {
                     >
                         View More
                     </Link>
-
                 </div>
             </div>
         </Fragment>

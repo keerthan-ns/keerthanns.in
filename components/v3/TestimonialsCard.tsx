@@ -11,8 +11,10 @@ import Link from "next/link";
 export default function TestimonialsCard() {
     return (
       <Fragment>
-        <div className="block md:hidden xl:col-span-2 xl:row-span-4 xl:col-start-6 bg-card-background rounded-2xl border-2 border-light-text/10">
-              <div className="pt-4 pb-2">
+        {/* <div className="block md:hidden xl:col-span-2 xl:row-span-4 xl:col-start-6 bg-card-background rounded-2xl border-2 border-light-text/10"> */}
+            <div className="block md:hidden xl:col-span-2 xl:row-span-2 xl:col-start-6 xl:row-start-5 bg-card-background rounded-2xl border-2 border-light-text/10">
+              
+          <div className="pt-4 pb-2">
                 <div className="border-b-2 border-light-text/10 pb-2">
                   <div className="flex justify-center items-center gap-2"> <svg className="text-theme-primary size-5" width="16"
                     height="17" viewBox="0 0 16 17" fill="none" xmlns="http://www.w3.org/2000/svg">

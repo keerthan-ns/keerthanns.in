@@ -12,7 +12,7 @@ import TechStackMobileCard from "@/components/v3/TechStackMobileCard";
 const V3 = () => {
   return (
     <PageLayout>
-      <div className="select-none grid gap-4 md:grid-cols-2 xl:grid-cols-7 xl:grid-rows-6 xl:gap-4 text-dark-text text-center">
+      <div className="select-none grid gap-3 md:grid-cols-2 xl:grid-cols-7 xl:grid-rows-7 xl:gap-2 text-dark-text text-center">
         <HeroProfileCard />
         <TechStackCard />
         <ExperienceCard />
