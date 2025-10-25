@@ -54,7 +54,7 @@ export default function ExperienceCard() {
 
                 <div
                     ref={scrollRef}
-                    className="h-[12.5rem] md:h-[17rem] xl:h-[12.5rem] overflow-y-auto pb-8"
+                    className="h-50 md:h-68 xl:h-50 overflow-y-auto pb-8"
                     onScroll={handleScroll}
                 >
                     {experiences.map((exp, idx) => (
@@ -111,10 +111,9 @@ export default function ExperienceCard() {
                 >
                     <IoIosArrowDown />
                 </button>
-
                 <Link
-                    href="/about"
-                    className={`absolute bottom-4 left-1/2 transform -translate-x-1/2 bg-primary font-medium text-sm text-white rounded p-2 shadow-lg transition-opacity duration-500 hover:bg-primary/90
+                    href="/about#experience"
+                    className={`absolute bottom-4 left-1/2 transform -translate-x-1/2 bg-primary font-medium text-xs text-white rounded p-2 shadow-lg transition-opacity duration-500 hover:bg-primary/90
                         ${(isHovered || isTouchDevice) && showKnowMore ? "opacity-100 pointer-events-auto" : "opacity-0 pointer-events-none"}`}
                 >
                     Know More
