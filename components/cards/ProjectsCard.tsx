@@ -1,3 +1,5 @@
+"use client"
+
 import { IconBadge } from "../ui/IconBadge";
 import { Fragment } from "react/jsx-runtime";
 import { Marquee } from "../ui/marquee";
@@ -6,8 +8,7 @@ import Link from "next/link";
 import { FaAnglesRight } from "react-icons/fa6";
 import { GrProjects } from "react-icons/gr";
 
-
-export default function ProjectsCardV2() {
+export default function ProjectsCard() {
     return (
         <Fragment>
             <div className="hidden xl:block xl:col-span-3 xl:row-span-3 xl:col-start-3 xl:row-start-4 rounded-2xl border-2 border-light-text/10">

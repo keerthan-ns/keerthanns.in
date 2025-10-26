@@ -1,4 +1,4 @@
-"use client";
+"use client"
 
 import Image from "next/image";
 import { Button } from "../ui/button";
@@ -11,9 +11,8 @@ import { IconBadge } from "../ui/IconBadge";
 import Link from "next/link";
 import { socials } from "@/data";
 
-export default function HeroProfileCardV2() {
+export default function HeroProfileCard() {
     return (
-        // <div className="hidden xl:block xl:row-span-2 xl:col-start-3 bg-card-background rounded-2xl border-2 border-light-text/10">
         <div className="xl:col-span-3 xl:row-span-3 xl:col-start-3 xl:row-start-1 rounded-2xl border-2 border-light-text/10">
             <div className="p-4 h-full flex flex-col gap-2 bg-card rounded-lg shadow-md">
                 <div className="flex justify-between">
@@ -43,14 +42,12 @@ export default function HeroProfileCardV2() {
                         </div>
                     </div>
                     <div className="font-medium text-sm">
-                        {/* <div className="flex items-center gap-2"> */}
                         <Link href={socials.resume} target="_blank">
                             <Button variant="link" className="cursor-pointer text-white hover:no-underline flex items-center justify-center gap-2 bg-white/10 transition-all duration-300 group">
                                 <span className="hidden xl:block">Resume</span>{" "}
                                 <IoDocumentText size={20} className="group-hover:animate-bounce"/>
                             </Button>
                         </Link>
-                        {/* </div> */}
                     </div>
                 </div>
                 <article className="flex flex-wrap gap-2 bg-[#141414] border border-light-text/10 py-4 px-2 rounded-lg shadow-md max-h-24 overflow-y-auto scrollbar-hide">

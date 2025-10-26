@@ -1,6 +1,4 @@
-import { AiFillLinkedin, AiFillTwitterCircle } from "react-icons/ai"
 import { BsGithub, BsInstagram, BsLinkedin, BsTwitterX } from "react-icons/bs"
-import { SiGmail } from "react-icons/si"
 
 export const socials = {
   mail: "mailto:keerthanns091@gmail.com",
@@ -115,10 +113,10 @@ export const projects = [
     tags: ['html', 'css/scss', ' Bootstrap']
   },
   {
-    title: 'My Portfolio (This website)',
+    title: 'My Portfolio V1 (Old portfolio)',
     description: 'This is my portfolio website. It is a static website built using ReactJS and TailwindCSS. I really enjoyed building this website.',
     github: 'https://github.com/keerthan-ns/portfolio',
-    link: 'https://keerthanns.vercel.app/',
+    link: 'https://keerthanns-v1.vercel.app/',
     img: "https://res.cloudinary.com/dg7etzwks/image/upload/v1688752957/portfolioProjects/portPro_b6lsrl.png",
     tags: ['ReactJS', 'css', 'TailwindCSS']
   },

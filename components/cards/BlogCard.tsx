@@ -9,7 +9,7 @@ export default function BlogCard() {
     >
       <div className="absolute inset-0 flex items-center justify-center">
         <p className="text-lg font-medium">
-          Something Coming Soon!
+          Something&apos;s Coming Soon!
         </p>
       </div>
     </div>
