@@ -43,7 +43,7 @@ export default function SocialsCard() {
             {socialsWithIcons.map((social) => (
               <Link
                 key={social.name} href={social.href} target="_blank"
-                className="text-neutral-400 bg-slate-500/20 py-1 px-2 rounded hover:text-white transition-colors duration-300"
+                className="text-neutral-400 bg-slate-500/20 py-1 px-2 rounded-md hover:text-white transition-colors duration-300"
               >
                 <div className="flex justify-start items-center gap-1">
                   <social.icon />
@@ -55,7 +55,7 @@ export default function SocialsCard() {
         </div>
       </div>
       <div className="hidden md:block xl:col-span-2 xl:row-span-4 xl:col-start-6 rounded-2xl ">
-        <div className="flex flex-col items-center py-4 px-8 mb-2 rounded-2xl border-2 border-light-text/10">
+        <div className="flex flex-col items-center py-5 px-8 mb-2 rounded-2xl border-2 border-light-text/10">
           <div className="w-fit p-3 bg-slate-500/20 rounded-full">
             <MdConnectWithoutContact size={30} className="text-primary" />
           </div>
@@ -85,7 +85,7 @@ export default function SocialsCard() {
             {socialsWithIcons.map((social) => (
               <Link
                 key={social.name} href={social.href} target="_blank"
-                className="text-neutral-400 bg-slate-500/20 py-1 px-2 rounded hover:text-white transition-colors duration-300"
+                className="text-neutral-400 bg-slate-500/20 py-2 px-2 rounded-md hover:text-white transition-colors duration-300"
               >
                 <div className="flex justify-start items-center gap-1">
                   <social.icon />

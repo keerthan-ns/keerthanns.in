@@ -33,7 +33,7 @@ export default function TechStackMobileCard() {
   
     return (
         <Fragment>
-            <div className="xl:hidden xl:col-span-2 xl:row-span-3 bg-card-background rounded-2xl border-2 border-light-text/10"
+            <div className="xl:hidden xl:col-span-2 xl:row-span-3 rounded-2xl border-2 border-light-text/10"
                 onMouseEnter={() => !isTouchDevice && setIsHovered(true)}
                 onMouseLeave={() => !isTouchDevice && setIsHovered(false)}
                 onFocus={() => !isTouchDevice && setIsHovered(true)}

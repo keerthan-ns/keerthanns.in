@@ -508,23 +508,23 @@ export default function Advanced() {
                   <div className="md:inline-block"> <a href="https://valoraprime.vercel.app/" target="_blank"
                     rel="noopener noreferrer" aria-label="Abrir sitio del proyecto Valora Prime"
                     className="block rounded-2xl border-2 border-light-text/10 bg-card-background w-full h-20 md:w-24 md:h-16 overflow-hidden hover:scale-105 hover:shadow-lg hover:border-theme-primary transition-transform duration-300">
-                    <img src="/projects/valoraprime_01.webp" className="object-cover h-full w-full"
+                    <img src="/work/valoraprime_01.webp" className="object-cover h-full w-full"
                       alt="Captura del proyecto Valora Prime" /> </a> </div>
                   <div className="md:inline-block"> <a href="https://github.com/itsteddydev/notepad" target="_blank"
                     rel="noopener noreferrer" aria-label="Abrir sitio del proyecto Notepad"
                     className="block rounded-2xl border-2 border-light-text/10 bg-card-background w-full h-20 md:w-24 md:h-16 overflow-hidden hover:scale-105 hover:shadow-lg hover:border-theme-primary transition-transform duration-300">
-                    <img src="/projects/notepad_01.webp" className="object-cover h-full w-full"
+                    <img src="/work/notepad_01.webp" className="object-cover h-full w-full"
                       alt="Captura del proyecto Notepad" /> </a> </div>
                   <div className="md:inline-block"> <a href="https://github.com/itsteddydev/neko-inn" target="_blank"
                     rel="noopener noreferrer" aria-label="Abrir sitio del proyecto Neko Inn"
                     className="block rounded-2xl border-2 border-light-text/10 bg-card-background w-full h-20 md:w-24 md:h-16 overflow-hidden hover:scale-105 hover:shadow-lg hover:border-theme-primary transition-transform duration-300">
-                    <img src="/projects/neko_inn_01.webp" className="object-cover h-full w-full"
+                    <img src="/work/neko_inn_01.webp" className="object-cover h-full w-full"
                       alt="Captura del proyecto Neko Inn" /> </a> </div>
                   <div className="md:inline-block"> <a
                     href="https://astro.build/themes/details/personal-hub-a-customizable-personal-link/" target="_blank"
                     rel="noopener noreferrer" aria-label="Abrir sitio del proyecto Personal Hub"
                     className="block rounded-2xl border-2 border-light-text/10 bg-card-background w-full h-20 md:w-24 md:h-16 overflow-hidden hover:scale-105 hover:shadow-lg hover:border-theme-primary transition-transform duration-300">
-                    <img src="/projects/personal_hub.webp" className="object-cover h-full w-full"
+                    <img src="/work/personal_hub.webp" className="object-cover h-full w-full"
                       alt="Captura del proyecto Personal Hub" /> </a> </div>
                 </div>
               </div>

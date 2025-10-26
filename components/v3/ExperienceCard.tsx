@@ -54,7 +54,7 @@ export default function ExperienceCard() {
 
                 <div
                     ref={scrollRef}
-                    className="h-50 md:h-68 xl:h-72 overflow-y-auto pb-8"
+                    className="h-50 md:h-68 xl:h-80 overflow-y-auto pb-8"
                     onScroll={handleScroll}
                 >
                     {experiences.map((exp, idx) => (

@@ -43,7 +43,7 @@ export default function ProjectsCard() {
             <div className="from-background pointer-events-none absolute inset-y-0 right-0 w-1/4 bg-linear-to-l"></div>
           </div>
           <Link
-            href="/projects"
+            href="/work"
             className={`absolute bottom-2 xl:-bottom-3 left-1/2 transform -translate-x-1/2 w-fit flex items-center gap-2 bg-slate-400/20 font-medium text-xs text-white rounded p-2 px-3 shadow-lg transition-opacity duration-500 hover:bg-primary/90 group`}
           >
             View More Projects
@@ -60,7 +60,7 @@ export default function ProjectsCard() {
               className="py-2 font-medium"
               iconSize={18}
             />
-            <p className="text-sm text-neutral-400">Works diuh</p>
+            <p className="text-sm text-neutral-400">Works Gallery</p>
           </div>
           <div className="relative mt-4 h-42 overflow-hidden">
             <Marquee pauseOnHover className="[--duration:20s]">
@@ -79,7 +79,7 @@ export default function ProjectsCard() {
             <div className="from-background pointer-events-none absolute inset-y-0 right-0 w-1/4 bg-linear-to-l"></div>
           </div>
           <Link
-            href="/projects"
+            href="/work"
             className={`absolute bottom-3 left-1/2 transform -translate-x-1/2 w-fit flex items-center gap-2 bg-slate-400/20 font-medium text-xs text-white rounded p-2 px-3 shadow-lg transition-opacity duration-500 hover:bg-primary/90 group`}
           >
             View More Projects
