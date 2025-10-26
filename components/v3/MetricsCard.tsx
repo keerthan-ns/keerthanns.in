@@ -1,4 +1,4 @@
-import { FaMapPin, FaProjectDiagram } from "react-icons/fa";
+import { FaProjectDiagram } from "react-icons/fa";
 import { HiEmojiHappy } from "react-icons/hi";
 import { PiShootingStarFill } from "react-icons/pi";
 import { IconBadge } from "../ui/IconBadge";
@@ -67,7 +67,7 @@ export default function MetricsCard() {
             <div className="flex justify-between items-center gap-1 xl:hidden">
                 <div className="xl:row-span-2 xl:col-start-3 bg-card-background rounded-2xl border-2 border-light-text/10 h-36">
                     <div className="py-2 px-1 flex flex-col justify-center items-center h-full">
-                        <div className="flex justify-center items-center gap-[1px]">
+                        <div className="flex justify-center items-center gap-px">
                             {/* <h2
                     className="counter-projects min-w-[1ch] text-center transition-transform duration-300 font-medium text-light-text text-[65px] leading-tight"
                             data-target="11">11</h2> <span className="text-theme-primary font-medium text-5xl">+</span> */}

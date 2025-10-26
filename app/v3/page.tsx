@@ -1,12 +1,11 @@
-import Advanced from "@/components/Advanced";
 import PageLayout from "../layout/PageLayoutt";
 import HeroProfileCard from "@/components/v3/HeroProfileCard";
 import MetricsCard from "@/components/v3/MetricsCard";
 import ExperienceCard from "@/components/v3/ExperienceCard";
 import TechStackCard from "@/components/v3/TechStackCard";
-import TestimonialsCard from "@/components/v3/TestimonialsCard";
 import ProjectsCard from "@/components/v3/ProjectsCard";
 import TechStackMobileCard from "@/components/v3/TechStackMobileCard";
+import SocialsCard from "@/components/v3/SocialsCard";
 
 
 const V3 = () => {
@@ -19,7 +18,7 @@ const V3 = () => {
         <MetricsCard />
         <ProjectsCard />
         <TechStackMobileCard />
-        <TestimonialsCard />
+        <SocialsCard />
       </div>
     </PageLayout>
   );

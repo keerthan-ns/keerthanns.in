@@ -12,7 +12,7 @@ import Link from "next/link";
 
 export default function HeroProfileCard() {
     return (
-        <div className="xl:col-span-3 xl:row-span-4 xl:col-start-3 xl:row-start-3 bg-card-background rounded-2xl border-2 border-light-text/10">
+        <div className="xl:col-span-3 xl:row-span-4 xl:col-start-3 xl:row-start-3 rounded-2xl border-2 border-light-text/10">
             <div className="p-4 h-full flex flex-col gap-2 bg-card rounded-lg shadow-md">
                 <div className="flex justify-between">
                     <div className="flex items-center">
@@ -53,9 +53,7 @@ export default function HeroProfileCard() {
                         </div>
                     </div>
                 </div>
-                <article
-                    className="flex flex-wrap gap-2 bg-[#141414] border border-light-text/10 py-4 px-2 rounded-lg shadow-md max-h-[6rem] overflow-y-auto scrollbar-hide"
-                >
+                <article className="flex flex-wrap gap-2 bg-[#141414] border border-light-text/10 py-4 px-2 rounded-lg shadow-md max-h-24 overflow-y-auto scrollbar-hide">
                     <IconBadge
                         icon={<FaMapMarkerAlt className="text-fuchsia-400" />}
                         text="Udupi, India"
@@ -79,7 +77,7 @@ export default function HeroProfileCard() {
                     I build <span className="text-primary/90">responsive</span> and <span className="text-primary/90">scalable</span> web applications using latest tools and frameworks.
                 </p>
                 <Link href="/about" className="w-fit mx-auto block">
-                    <Button variant="link" className="cursor-pointer w-fit mx-auto mt-2 items-center justify-center  hover:bg-white/10 transition-all duration-300 group">
+                    <Button variant="link" className="hover:no-underline cursor-pointer w-fit mx-auto mt-2 items-center justify-center  hover:bg-white/10 transition-all duration-300 group">
                         Know more about me
                         <FaAnglesRight className=" transform transition-transform duration-300 group-hover:translate-x-1" />
                     </Button>

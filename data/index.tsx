@@ -1,6 +1,42 @@
+import { AiFillLinkedin, AiFillTwitterCircle } from "react-icons/ai"
+import { BsGithub, BsInstagram, BsLinkedin, BsTwitterX } from "react-icons/bs"
+import { SiGmail } from "react-icons/si"
+
 export const socials = {
-  mail: "mailto:keerthanns091@gmail.com"
+  mail: "mailto:keerthanns091@gmail.com",
+  github: "https://github.com/keerthan-ns",
+  linkedin: "https://www.linkedin.com/in/keerthan-ns/",
+  twitter: "https://twitter.com/keerthan_ns",
+  instagram: "https://instagram.com/keerthan_ns"
 }
+
+export const socialsWithIcons = [
+  {
+    name: 'Github',
+    href: socials.github,
+    icon: () => (
+      <BsGithub className="w-5 h-5 hover:animate-wiggle hover:text-white" />
+    ),
+  }, {
+    name: 'LinkedIn',
+    href: socials.linkedin,
+    icon: () => (
+      <BsLinkedin className="w-5 h-5 hover:animate-wiggle hover:text-white" />
+    ),
+  }, {
+    name: 'Instagram',
+    href: socials.instagram,
+    icon: () => (
+      <BsInstagram className="w-5 h-5 hover:animate-wiggle hover:text-white" />
+    ),
+  }, {
+    name: 'Twitter',
+    href: socials.twitter,
+    icon: () => (
+      <BsTwitterX className="w-5 h-5 hover:animate-wiggle hover:text-white" />
+    ),
+  }
+]
 
 export const experiences = [
   {
