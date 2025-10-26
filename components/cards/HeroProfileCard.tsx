@@ -22,16 +22,14 @@ export default function HeroProfileCard() {
                             height={440}
                             src="/static/keerthan/me.png"
                             alt="Keerthan's profile"
-                            className="size-24 rounded object-cover border border-white/10 bg-primary/20 shadow-lg"
+                            className="size-24 rounded border border-white/10 bg-primary shadow-lg"
                         />
                         <div className="flex items-start justify-between h-full flex-col ml-2 md:ml-4">
-                            <article className="undefined  bg-icon-card rounded-full shadow-md py-1 px-3 text-testimonial-text  hover:bg-icon-background/80 transition-all duration-300">
-                                <span className="flex justify-evenly items-center gap-[2px]">
-                                    <Badge className="bg-gray-600/10 text-green-400 border-0 px-2 py-1 animate-pulse">
-                                        <FaRegDotCircle size={200} /> Available to work
-                                    </Badge>
-                                </span>{" "}
-                            </article>
+                            <span className="flex justify-evenly items-center gap-[2px]">
+                                <Badge className="bg-gray-600/10 text-green-400 border-0 px-2 py-1 animate-pulse">
+                                    <FaRegDotCircle size={200} /> Available to work
+                                </Badge>
+                            </span>
                             <h3 className="font-semibold text-xl text-dark-text">
                                 Keerthan NS
                             </h3>

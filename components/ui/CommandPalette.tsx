@@ -49,7 +49,7 @@ const commands: Cmd[] = [
         href: "/"
     }, {
         group: "Go to",
-        label: "About Me",
+        label: "About",
         icon: <FaAnglesRight className="mr-2" />,
         shortcut: "",
         type: "link",
