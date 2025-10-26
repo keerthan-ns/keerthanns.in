@@ -1,6 +1,6 @@
 "use client"
 
-import { IconBadge } from "../ui/IconBadge";
+import { IconBadge } from "../common/IconBadge";
 import { Fragment } from "react";
 import { socials, socialsWithIcons } from "@/data";
 import Link from "next/link";

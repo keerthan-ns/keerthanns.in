@@ -1,7 +1,7 @@
 "use client"
 
 import { FaSuitcase } from "react-icons/fa6";
-import { IconBadge } from "../ui/IconBadge";
+import { IconBadge } from "../common/IconBadge";
 import Image from "next/image";
 import { useRef, useState, useEffect } from "react";
 import { IoIosArrowDown } from "react-icons/io";

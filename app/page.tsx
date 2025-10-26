@@ -7,7 +7,7 @@ import TechStackMobileCard from "@/components/cards/TechStackMobileCard";
 import BlogCard from "@/components/cards/BlogCard";
 import SocialsCard from "@/components/cards/SocialsCard";
 import FooterCard from "@/components/cards/FooterCard";
-import CommandPalette from "@/components/ui/CommandPalette";
+import CommandPalette from "@/components/common/CommandPalette";
 
 export default function Home() {
   return (

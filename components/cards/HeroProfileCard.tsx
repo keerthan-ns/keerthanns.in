@@ -7,7 +7,7 @@ import { FaGraduationCap, FaRegDotCircle, FaMapMarkerAlt } from "react-icons/fa"
 import { FaAnglesRight } from "react-icons/fa6";
 import { IoIdCardSharp } from "react-icons/io5";
 import { IoDocumentText } from "react-icons/io5";
-import { IconBadge } from "../ui/IconBadge";
+import { IconBadge } from "../common/IconBadge";
 import Link from "next/link";
 import { socials } from "@/data";
 

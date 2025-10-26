@@ -1,11 +1,12 @@
 "use client"
 
 import { BsStack } from "react-icons/bs";
-import { IconBadge } from "../ui/IconBadge";
+import { IconBadge } from "../common/IconBadge";
 import { useRef, useState, useEffect, Fragment } from "react";
 import { IoIosArrowDown } from "react-icons/io";
 import Link from "next/link";
 import Image from "next/image";
+import { techStacks } from "@/data";
 
 export default function TechStackCard() {
     const scrollRef = useRef<HTMLDivElement>(null);
@@ -59,19 +60,7 @@ export default function TechStackCard() {
                         onScroll={handleScroll}
                     >
                         <div className="select-none absolute flex flex-wrap justify-center items-center gap-2 pt-1 px-2 pb-14">
-                            {[
-                                { name: 'Java', src: '/static/stacks/java.svg' },
-                                { name: 'Typescript', src: '/static/stacks/typescript.svg' },
-                                { name: 'Next.js', src: '/static/stacks/nextjs.svg' },
-                                { name: 'ReactJs', src: '/static/stacks/react.svg' },
-                                { name: 'Tailwind', src: '/static/stacks/tailwind.svg' },
-                                { name: 'Spring boot', src: '/static/stacks/springboot.svg' },
-                                { name: 'NodeJs', src: '/static/stacks/nodejs.svg' },
-                                { name: 'Git', src: '/static/stacks/git.svg' },
-                                { name: 'Docker', src: '/static/stacks/docker.svg' },
-                                { name: 'Kubernetes', src: '/static/stacks/kubernetes.svg' },
-                                { name: 'Jenkins', src: '/static/stacks/jenkins.svg' },
-                            ].map((tech, idx) => (
+                            {techStacks.map((tech, idx) => (
                                 <article
                                     key={idx}
                                     className="flex justify-start items-center gap-1 rounded-lg shadow-md py-1 pl-1 pr-4 hover:bg-slate-400/20 transition-all duration-300"

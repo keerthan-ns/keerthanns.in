@@ -1,6 +1,6 @@
 "use client";
 
-import { Dialog, DialogContent } from "./dialog";
+import { Dialog, DialogContent } from "../ui/dialog";
 import {
     Command,
     CommandEmpty,
@@ -9,7 +9,7 @@ import {
     CommandItem,
     CommandList,
     CommandSeparator,
-} from "./command";
+} from "../ui/command";
 import { Fragment, useEffect, useState } from "react";
 import { socials } from "@/data";
 import { BsGithub, BsInstagram, BsLinkedin, BsTwitterX } from "react-icons/bs";
@@ -151,7 +151,7 @@ export default function CommandPalette() {
                 <RiCommandLine size={24} />
             </button>
             <Dialog open={open} onOpenChange={setOpen}>
-                <DialogContent className="p-0 shadow-lg max-w-lg overflow-hidden bg-[#171717]">
+                <DialogContent className="p-0 shadow-lg w-full max-w-[calc(100%-2rem)] overflow-hidden bg-[#171717]">
                     <Command>
                         <CommandInput placeholder="Search command..." />
                         <CommandList>

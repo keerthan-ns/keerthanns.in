@@ -1,6 +1,6 @@
 "use client"
 
-import { IconBadge } from "../ui/IconBadge";
+import { IconBadge } from "../common/IconBadge";
 import { Fragment } from "react/jsx-runtime";
 import { Marquee } from "../ui/marquee";
 import { projects } from "@/data";

@@ -129,3 +129,17 @@ export const projects = [
     tags: ['ReactJS', 'css/scss', 'Django', 'MongoDB']
   }
 ]
+
+export const techStacks = [
+  { name: 'Java', src: '/static/stacks/java.svg' },
+  { name: 'Typescript', src: '/static/stacks/typescript.svg' },
+  { name: 'Next.js', src: '/static/stacks/nextjs.svg' },
+  { name: 'ReactJs', src: '/static/stacks/react.svg' },
+  { name: 'Tailwind', src: '/static/stacks/tailwind.svg' },
+  { name: 'Spring boot', src: '/static/stacks/springboot.svg' },
+  { name: 'NodeJs', src: '/static/stacks/nodejs.svg' },
+  { name: 'Git', src: '/static/stacks/git.svg' },
+  { name: 'Docker', src: '/static/stacks/docker.svg' },
+  { name: 'Kubernetes', src: '/static/stacks/kubernetes.svg' },
+  { name: 'Jenkins', src: '/static/stacks/jenkins.svg' },
+]

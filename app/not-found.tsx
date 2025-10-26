@@ -1,4 +1,4 @@
-import CommandPalette from "@/components/ui/CommandPalette";
+import CommandPalette from "@/components/common/CommandPalette";
 
 export const metadata = {
   title: 'Not Found',
