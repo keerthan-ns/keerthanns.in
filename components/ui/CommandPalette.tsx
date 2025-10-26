@@ -16,6 +16,7 @@ import { BsGithub, BsInstagram, BsLinkedin, BsTwitterX } from "react-icons/bs";
 import { FaAnglesRight } from "react-icons/fa6";
 import { IoDocumentText } from "react-icons/io5";
 import { RiCommandLine } from "react-icons/ri";
+import { useRouter } from "next/navigation";
 
 type CommandLink = {
     group: string;
@@ -40,6 +41,13 @@ type Cmd = CommandLink | CommandFn;
 
 const commands: Cmd[] = [
     {
+        group: "Go to",
+        label: "Home",
+        icon: <FaAnglesRight className="mr-2" />,
+        shortcut: "",
+        type: "link",
+        href: "/"
+    }, {
         group: "Go to",
         label: "About Me",
         icon: <FaAnglesRight className="mr-2" />,
@@ -98,6 +106,7 @@ const commands: Cmd[] = [
 
 export default function CommandPalette() {
     const [open, setOpen] = useState(false);
+    const router = useRouter();
 
     // open on Ctrl+K
     useEffect(() => {
@@ -159,9 +168,16 @@ export default function CommandPalette() {
                                                         key={i}
                                                         onSelect={() => {
                                                             if (cmd.type === "link") {
-                                                                if (cmd.newTab)
+                                                                if (cmd.newTab) {
                                                                     window.open(cmd.href, "_blank");
-                                                                else window.location.href = cmd.href;
+                                                                } else {
+                                                                    // internal link
+                                                                    if (cmd.href.startsWith("/")) {
+                                                                        router.push(cmd.href); // client-side navigation
+                                                                    } else {
+                                                                        window.location.href = cmd.href; // external link
+                                                                    }
+                                                                }
                                                             } else if (cmd.type === "fn") {
                                                                 cmd.fn();
                                                             }
@@ -171,9 +187,7 @@ export default function CommandPalette() {
                                                         {cmd.icon}
                                                         <span>{cmd.label}</span>
                                                         {cmd.shortcut && (
-                                                            <kbd className="ml-auto text-xs opacity-50">
-                                                                {cmd.shortcut}
-                                                            </kbd>
+                                                            <kbd className="ml-auto text-xs opacity-50">{cmd.shortcut}</kbd>
                                                         )}
                                                     </CommandItem>
                                                 ))}

@@ -45,7 +45,7 @@ export default function HeroProfileCard() {
                         <Link href={socials.resume} target="_blank">
                             <Button variant="link" className="cursor-pointer text-white hover:no-underline flex items-center justify-center gap-2 bg-white/10 transition-all duration-300 group">
                                 <span className="hidden xl:block">Resume</span>{" "}
-                                <IoDocumentText size={20} className="group-hover:animate-bounce"/>
+                                <IoDocumentText size={20} className="group-hover:animate-bounce" />
                             </Button>
                         </Link>
                     </div>
@@ -73,12 +73,12 @@ export default function HeroProfileCard() {
                 <p className="text-white/70">
                     I build <span className="text-primary/90">responsive</span> and <span className="text-primary/90">scalable</span> web applications using latest tools and frameworks.
                 </p>
-                <Link href="/about" className="w-fit mx-auto block">
-                    <Button variant="link" className="bg-white/10 lg:bg-transparent hover:no-underline cursor-pointer w-fit mx-auto mt-2 items-center justify-center hover:bg-white/10 transition-all duration-300 group">
+                <Button asChild variant="link" className="bg-white/10 lg:bg-transparent hover:no-underline cursor-pointer w-fit mx-auto mt-2 items-center justify-center hover:bg-white/10 transition-all duration-300 group">
+                    <Link href="/about">
                         Know more about me
                         <FaAnglesRight className=" transform transition-transform duration-300 group-hover:translate-x-1" />
-                    </Button>
-                </Link>
+                    </Link>
+                </Button>
             </div>
         </div>
     );
