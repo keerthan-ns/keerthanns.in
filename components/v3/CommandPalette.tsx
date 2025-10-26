@@ -1,6 +1,6 @@
 "use client";
 
-import { Dialog, DialogContent, DialogFooter } from "../ui/dialog";
+import { Dialog, DialogContent } from "../ui/dialog";
 import {
     Command,
     CommandEmpty,
@@ -11,9 +11,8 @@ import {
     CommandSeparator,
 } from "../ui/command";
 import { Fragment, useEffect, useState } from "react";
-import { IconBadge } from "../ui/IconBadge";
 import { socials } from "@/data";
-import { Bs0Circle, BsArrowRight, BsGithub, BsInstagram, BsLinkedin, BsTwitterX } from "react-icons/bs";
+import { BsGithub, BsInstagram, BsLinkedin, BsTwitterX } from "react-icons/bs";
 import { FaAnglesRight } from "react-icons/fa6";
 import { IoDocumentText } from "react-icons/io5";
 
@@ -118,6 +117,7 @@ export default function CommandPalette() {
                 if (s === `ctrl${key}` && isCtrl) {
                     e.preventDefault();
                     if (cmd.type === "link") {
+                        // eslint-disable-next-line @typescript-eslint/no-unused-expressions
                         cmd.newTab ? window.open(cmd.href, "_blank") : (window.location.href = cmd.href);
                     } else if (cmd.type === "fn") {
                         cmd.fn();
