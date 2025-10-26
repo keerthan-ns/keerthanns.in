@@ -13,13 +13,10 @@ export default function Home() {
   return (
     <PageLayout>
           <div className="select-none grid gap-3 md:grid-cols-2 xl:grid-cols-7 xl:grid-rows-7 xl:gap-2 text-dark-text text-center">
-            {/* <HeroProfileCard /> */}
             <HeroProfileCardV2 />
             <TechStackCard />
             <ExperienceCard />
-            {/* <MetricsCard /> */}
             <ProjectsCardV2 />
-            {/* <ProjectsCard /> */}
             <TechStackMobileCard />
             <BlogCard />
             <SocialsCard />

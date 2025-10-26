@@ -5,13 +5,11 @@ import { projects } from "@/data";
 import Link from "next/link";
 import { FaAnglesRight } from "react-icons/fa6";
 import { GrProjects } from "react-icons/gr";
-import Image from "next/image";
 
 
 export default function ProjectsCardV2() {
     return (
         <Fragment>
-            {/* <div className="hidden xl:block xl:row-span-2 xl:col-start-3 bg-card-background rounded-2xl border-2 border-light-text/10"> */}
             <div className="hidden xl:block xl:col-span-3 xl:row-span-3 xl:col-start-3 xl:row-start-4 rounded-2xl border-2 border-light-text/10">
                 <div className="pt-4 pb-2 relative">
                     <div className="border-b-2 border-light-text/10 pb-2">
