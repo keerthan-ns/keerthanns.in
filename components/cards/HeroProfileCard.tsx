@@ -1,65 +1,88 @@
 "use client";
 
 import Image from "next/image";
-import { CardShell } from "./CardShell";
 import { Button } from "../ui/button";
 import { MdFileDownload } from "react-icons/md";
 import { Badge } from "../ui/badge";
-import { BsDot } from "react-icons/bs";
-import { FaDotCircle, FaGraduationCap, FaIdCard, FaMapPin, FaRegDotCircle } from "react-icons/fa";
+import { FaGraduationCap, FaRegDotCircle, FaMapMarkerAlt} from "react-icons/fa";
+import { FaAnglesRight } from "react-icons/fa6";
+import { IoIdCardSharp } from "react-icons/io5";
 import { IconBadge } from "../ui/IconBadge";
-// import { Instagram, Mail, Phone, Github, DownloadIcon, Dot, LocateIcon, MapPin, GraduationCap, IdCardLanyard } from "lucide-react";
-// import { Badge } from "@/components/ui/badge";
-// import { Chip } from "@heroui/chip";
-// import { IconBadge } from "@/components/ui/IconBadge";
+import Link from "next/link";
 
 export default function HeroProfileCard() {
     return (
-        <CardShell>
-            <div className="flex flex-row flex-wrap items-center gap-3 relative">
-                <div className="w-24 h-24 mx-auto relative">
-                    <Image
-                        src="/me.jpg"            // change to your image
-                        alt="profile picture"
-                        fill
-                        className="rounded object-cover border border-white/10 shadow-lg"
-                    />
-                </div>
-                <div className="flex flex-1 flex-col sm:flex-row justify-center gap-2">
-                    <div className="space-y-1 items-center">
-                        <Badge className="bg-gray-600/10 text-green-400 border-0 px-2 py-1">
-                            <FaRegDotCircle size={200} /> Available to work
-                        </Badge>
-                        <h1 className="text-lg font-semibold">Keerthan N S</h1>
-                        <p className="text-xs text-neutral-400">I&apos;m a <span className="text-fuchsia-400">Full Stack Developer</span></p>
+        <div className="xl:col-span-3 xl:row-span-4 xl:col-start-3 xl:row-start-3 rounded-2xl border-2 border-light-text/10">
+            <div className="p-4 h-full flex flex-col gap-2 bg-card rounded-lg shadow-md">
+                <div className="flex justify-between">
+                    <div className="flex items-center">
+                        <Image
+                            width={240}
+                            height={440}
+                            src="/me.webp"
+                            alt="Keerthan's profile"
+                            className="size-24 rounded object-cover border border-white/10 shadow-lg"
+                        />
+                        <div className="flex items-start justify-between h-full flex-col ml-2 md:ml-4">
+                            <article className="undefined  bg-icon-card rounded-full shadow-md py-1 px-3 text-testimonial-text  hover:bg-icon-background/80 transition-all duration-300">
+                                <span className="flex justify-evenly items-center gap-[2px]">
+                                    <Badge className="bg-gray-600/10 text-green-400 border-0 px-2 py-1">
+                                        <FaRegDotCircle size={200} /> Available to work
+                                    </Badge>
+                                </span>{" "}
+                            </article>
+                            <h3 className="font-semibold text-xl text-dark-text">
+                                Keerthan NS
+                            </h3>
+                            <p className="font-semibold text-sm text-primary">
+                                <span className="text-white">I&apos;m a</span>{" "}
+                                Full-Stack Developer
+                            </p>
+                        </div>
                     </div>
-                    <Button variant="outline" size="sm" onClick={() => {
-                        console.log("Download Resume");
-                    }}>
-                        Resume <MdFileDownload />
-                    </Button>
+                    <div className="font-medium text-sm text-testimonial-title">
+                        <div className="flex items-center gap-2">
+                            {" "}
+                            <span className="hidden xl:block">Resume</span>{" "}
+                            <Button className="cursor-pointer" variant="secondary" size="sm" onClick={() => {
+                                console.log("Download Resume");
+                            }}>
+                                <span className="sr-only">Descargar CV en PDF</span>
+                                <MdFileDownload />
+                            </Button>
+                        </div>
+                    </div>
                 </div>
+                <article className="flex flex-wrap gap-2 bg-[#141414] border border-light-text/10 py-4 px-2 rounded-lg shadow-md max-h-24 overflow-y-auto scrollbar-hide">
+                    <IconBadge
+                        icon={<FaMapMarkerAlt className="text-fuchsia-400" />}
+                        text="Udupi, India"
+                        className="bg-gray-600/10 font-medium text-xs text-white/70 border px-2 py-1 rounded-full"
+                        iconSize={14}
+                    />
+                    <IconBadge
+                        icon={<IoIdCardSharp className="text-fuchsia-400" />}
+                        text="Product Engineer"
+                        className="bg-gray-600/10 font-medium text-xs text-white/70 border px-2 py-1 rounded-full"
+                        iconSize={14}
+                    />
+                    <IconBadge
+                        icon={<FaGraduationCap className="text-fuchsia-400" />}
+                        text="NMAMIT, Nitte"
+                        className="bg-gray-600/10 font-medium text-xs text-white/70 border px-2 py-1 rounded-full"
+                        iconSize={14}
+                    />
+                </article>
+                <p className="text-white/70">
+                    I build <span className="text-primary/90">responsive</span> and <span className="text-primary/90">scalable</span> web applications using latest tools and frameworks.
+                </p>
+                <Link href="/about" className="w-fit mx-auto block">
+                    <Button variant="link" className="hover:no-underline cursor-pointer w-fit mx-auto mt-2 items-center justify-center  hover:bg-white/10 transition-all duration-300 group">
+                        Know more about me
+                        <FaAnglesRight className=" transform transition-transform duration-300 group-hover:translate-x-1" />
+                    </Button>
+                </Link>
             </div>
-            <div className="flex flex-wrap items-center gap-2 rounded-2xl border border-neutral-800 bg-neutral-900 p-3 shadow-[0_0_20px_rgba(0,0,0,0.25)]">
-                <IconBadge
-                    icon={<FaMapPin className="text-fuchsia-400" />}
-                    text="Udupi, India"
-                    className="bg-gray-600/10 text-xs font-light text-white border-1 border-white px-2 py-1 rounded-full"
-                    iconSize={20}
-                />
-                <IconBadge
-                    icon={<FaIdCard className="text-fuchsia-400" />}
-                    text="Product Engineer"
-                    className="bg-gray-600/10 text-xs font-light text-white border-1 border-white px-2 py-1 rounded-full"
-                    iconSize={20}
-                />
-                <IconBadge
-                    icon={<FaGraduationCap className="text-fuchsia-400" />}
-                    text="NMAMIT, Nitte"
-                    className="bg-gray-600/10 text-xs font-light text-white border-1 border-white px-2 py-1 rounded-full"
-                    iconSize={20}
-                />
-            </div>
-        </CardShell>
+        </div>
     );
 }

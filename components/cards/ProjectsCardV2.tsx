@@ -1,6 +1,3 @@
-import { FaProjectDiagram } from "react-icons/fa";
-import { HiEmojiHappy } from "react-icons/hi";
-import { PiShootingStarFill } from "react-icons/pi";
 import { IconBadge } from "../ui/IconBadge";
 import { Fragment } from "react/jsx-runtime";
 import { Marquee } from "../ui/marquee";
@@ -8,6 +5,7 @@ import { projects } from "@/data";
 import Link from "next/link";
 import { FaAnglesRight } from "react-icons/fa6";
 import { GrProjects } from "react-icons/gr";
+import Image from "next/image";
 
 
 export default function ProjectsCardV2() {

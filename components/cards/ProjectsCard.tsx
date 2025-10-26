@@ -1,15 +1,13 @@
 "use client"
 
-import { FaAnglesRight, FaSuitcase } from "react-icons/fa6";
+import { FaAnglesRight } from "react-icons/fa6";
 import { IconBadge } from "../ui/IconBadge";
-import Image from "next/image";
-import { useRef, useState, useEffect, Fragment } from "react";
-import { IoIosArrowDown } from "react-icons/io";
-import { experiences, projects } from "@/data";
+import { Fragment } from "react";
+import { projects } from "@/data";
 import Link from "next/link";
-import { BsStack } from "react-icons/bs";
 import { GrProjects } from "react-icons/gr";
 import { Marquee } from "../ui/marquee";
+import Image from "next/image";
 
 export default function ProjectsCard() {
   return (

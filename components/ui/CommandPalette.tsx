@@ -1,6 +1,6 @@
 "use client";
 
-import { Dialog, DialogContent } from "../ui/dialog";
+import { Dialog, DialogContent } from "./dialog";
 import {
     Command,
     CommandEmpty,
@@ -9,7 +9,7 @@ import {
     CommandItem,
     CommandList,
     CommandSeparator,
-} from "../ui/command";
+} from "./command";
 import { Fragment, useEffect, useState } from "react";
 import { socials } from "@/data";
 import { BsGithub, BsInstagram, BsLinkedin, BsTwitterX } from "react-icons/bs";

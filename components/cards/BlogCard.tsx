@@ -7,7 +7,6 @@ export default function BlogCard() {
         bg-[url('/static/others/grid.png')] bg-cover bg-center
       "
     >
-      {/* Blur overlay */}
       <div className="absolute inset-0 flex items-center justify-center">
         <p className="text-lg font-medium">
           Something Coming Soon!

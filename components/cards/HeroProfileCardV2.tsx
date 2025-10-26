@@ -2,7 +2,6 @@
 
 import Image from "next/image";
 import { Button } from "../ui/button";
-import { MdFileDownload } from "react-icons/md";
 import { Badge } from "../ui/badge";
 import { FaGraduationCap, FaRegDotCircle, FaMapMarkerAlt } from "react-icons/fa";
 import { FaAnglesRight } from "react-icons/fa6";
