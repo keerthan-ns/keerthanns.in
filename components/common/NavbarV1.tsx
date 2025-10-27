@@ -6,11 +6,12 @@ import {
   NavItems,
   MobileNav,
   NavbarLogo,
-  NavbarButton,
   MobileNavHeader,
   MobileNavToggle,
   MobileNavMenu,
 } from "@/components/ui/resizable-navbar";
+import Link from "next/link";
+import { usePathname } from "next/navigation";
 import { useState } from "react";
 
 export function NavbarV1() {
@@ -30,6 +31,11 @@ export function NavbarV1() {
   ];
 
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+    const pathname = usePathname();
+  
+    const isActiveLink = (href: string) => {
+      return pathname === href;
+    };
 
   return (
     // <div className="relative w-full">
@@ -59,14 +65,15 @@ export function NavbarV1() {
             onClose={() => setIsMobileMenuOpen(false)}
           >
             {navItems.map((item, idx) => (
-              <a
+              <Link
                 key={`mobile-link-${idx}`}
                 href={item.link}
                 onClick={() => setIsMobileMenuOpen(false)}
-                className="relative text-neutral-600 dark:text-neutral-300"
+                className={`relative ${isActiveLink(item.link) ? "text-primary font-semibold" : "text-neutral-600 dark:text-neutral-300"}
+            `}
               >
                 <span className="block">{item.name}</span>
-              </a>
+              </Link>
             ))}
             {/* <div className="flex w-full flex-col gap-4">
               <NavbarButton

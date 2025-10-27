@@ -80,7 +80,7 @@ export const education = [
   {
     timeline:'2021-2024',
     name:'NMAM Institute of Technology, Nitte',
-    designation:'BE in Computer Science'
+    designation:'BE in Computer Science & Engineering'
   },{
     timeline:'2018-2021',
     name:'NRAM Polytechnic, Nitte',
