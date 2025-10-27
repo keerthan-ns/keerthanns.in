@@ -10,9 +10,9 @@ import AboutInfo from "@/components/about";
 export default function AboutPage() {
   return (
     <PageLayout>
-      <div className="pointer-events-none absolute top-0 left-0 w-full h-44 bg-linear-to-b from-black via-[#090909] to-transparent z-0" />
+      {/* <div className="pointer-events-none absolute top-0 left-0 w-full h-44 bg-linear-to-b from-black via-[#090909] to-transparent z-0" /> */}
       <NavbarV1 />
-      <div className="mx-auto max-w-[1100px] lg:px-6 lg:py-16">
+      <div className="mx-auto container max-w-[1100px] lg:px-6 lg:py-16">
         <div className="bg-linear-to-b from-black/60 to-[#050505] border border-white/6 rounded-3xl p-3 md:p-8 shadow-2xl">
           <AboutInfo />
           <hr className="border-t-4 border-primary mt-8 mx-auto w-54" />
