@@ -76,6 +76,22 @@ export const experiences = [
   }
 ]
 
+export const education = [
+  {
+    timeline:'2021-2024',
+    name:'NMAM Institute of Technology, Nitte',
+    designation:'BE in Computer Science'
+  },{
+    timeline:'2018-2021',
+    name:'NRAM Polytechnic, Nitte',
+    designation:'Diploma in Computer Science'
+  },{
+    timeline:'2006-2018',
+    name:'Dr.NSAM English Medium High School, Nitte',
+    designation:'Secondary Education'
+  }
+]
+
 export const projects = [
   {
     title: 'Incridea-2023',

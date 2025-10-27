@@ -5,7 +5,7 @@ import { NavbarV1 } from "@/components/common/NavbarV1";
 import AboutInfo from "@/components/about";
 import { ExperienceTimeline } from "@/components/experience-timeline";
 import Image from "next/image";
-import { techStacks } from "@/data";
+import { education, techStacks } from "@/data";
 
 
 export default function AboutPage() {
@@ -21,6 +21,24 @@ export default function AboutPage() {
             Work Experience
           </h1>
           <ExperienceTimeline />
+        </section>
+        <section id="education" className="mt-20 mb-10">
+          <h1 className="lg:mt-5 mt-0 text-primary lg:text-3xl text-xl font-semibold">
+            Education
+          </h1>
+          <div className="flex flex-col md:flex-row justify-center gap-3 mt-6">
+            {
+              education.map((edu, idx) => (
+                <div key={idx} className="w-full rounded-2xl border-2 border-light-text/10 p-4">
+                  <h2 className="text-lg font-semibold text-white">{edu.designation}</h2>
+                  <p className="text-sm font-medium text-primary hover:underline">
+                    {edu.name}
+                  </p>
+                  <p className="text-sm text-neutral-400">{edu.timeline}</p>
+                </div>
+              ))
+            }
+          </div>
         </section>
         <section id="tech-stack" className="mt-20 mb-10">
           <h1 className="lg:mt-5 mt-0 text-primary lg:text-3xl text-xl font-semibold">
