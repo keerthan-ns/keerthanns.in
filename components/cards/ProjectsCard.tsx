@@ -27,7 +27,7 @@ export default function ProjectsCard() {
                             {
                                 projects.slice(0, 4).map((project, index) => (
                                     <div key={index} className="md:inline-block">
-                                        <a href={project.link ? project.link : project.github} target="_blank" rel="noopener noreferrer" aria-label={`${project.title}`}
+                                        <a href={project.github ? project.github : project.link} target="_blank" rel="noopener noreferrer" aria-label={`${project.title}`}
                                             className="block rounded-2xl w-full h-28 md:w-44 md:h-32 overflow-hidden hover:scale-105 hover:shadow-lg hover:border-theme-primary transition-transform duration-300">
                                             <img src={project.img} className="object-cover h-full w-full" alt={`${project.title}`} />
                                         </a>
@@ -56,7 +56,7 @@ export default function ProjectsCard() {
                             className="py-2 font-medium"
                             iconSize={18}
                         />
-                        <p className="text-sm text-neutral-400">Works diuh</p>
+                        <p className="text-sm text-neutral-400">Works Gallery</p>
                     </div>
                     <div className="relative mt-4 h-42 overflow-hidden">
                         <Marquee pauseOnHover className="[--duration:20s]">

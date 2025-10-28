@@ -154,7 +154,7 @@ export default function CommandPalette() {
                 <DialogContent className="p-0 shadow-lg w-full max-w-[calc(100%-2rem)] overflow-hidden bg-[#171717]">
                     <Command>
                         <CommandInput placeholder="Search command..." />
-                        <CommandList>
+                        <CommandList className="visible-scrollbar">
                             <CommandEmpty>No results found.</CommandEmpty>
 
                             {groups.map((gName, idx) => {

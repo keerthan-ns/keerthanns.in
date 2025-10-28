@@ -66,6 +66,12 @@ html{
 	width: 0;
 }
 
+.visible-scrollbar {
+  scrollbar-width: thin;
+  -ms-overflow-style: auto;
+  -webkit-overflow-scrolling: touch;
+}
+
 :root {
   --radius: 0.625rem;
   --background: oklch(1 0 0);

@@ -1,7 +1,7 @@
 import { Timeline } from "@/components/ui/timeline";
 import { experiences } from "@/data";
 
-export function ExperienceTimeline() {
+export function Experience() {
   return (
       <Timeline data={experiences} />
   );

@@ -96,13 +96,14 @@ export const projects = [
   {
     title: 'Incridea-2023',
     description: 'Website for the annual techno-cultural fest of NMAMIT, called Incridea. Worked in team of 9. The website was visited by over 5000+ people throughout the duration of the fest.',
-    github: 'https://github.com/incridea-23/incridea-client',
+    github: 'https://github.com/incridea-nmamit/incridea-client/tree/2023',
+    link: 'http://incridea.in',
     img: "https://res.cloudinary.com/dg7etzwks/image/upload/v1683852443/portfolioProjects/uqau9y2uttv5ma9wjqa1.png",
     tags: ['Nextjs', 'TypeScript', 'TailwindCSS', 'GraphQl', 'Prisma']
   }, {
     title: 'Incridea-2024',
     description: 'Website for the annual techno-cultural fest of NMAMIT, called Incridea. Worked in team of 24. The website was visited by over 5000+ people throughout the duration of the fest.',
-    github: 'https://github.com/incridea-23/incridea-client',
+    github: 'https://github.com/incridea-nmamit/incridea-client/tree/2024',
     link: 'http://incridea.in',
     img: "https://res.cloudinary.com/dg7etzwks/image/upload/v1717234994/portfolioProjects/nuasdlmme1hwy6n8evki.png",
     tags: ['Nextjs', 'TypeScript', 'TailwindCSS', 'GraphQl', 'Prisma']
