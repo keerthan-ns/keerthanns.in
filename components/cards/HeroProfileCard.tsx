@@ -14,7 +14,7 @@ import { socials } from "@/data";
 export default function HeroProfileCard() {
     return (
         <div className="xl:col-span-3 xl:row-span-3 xl:col-start-3 xl:row-start-1 rounded-2xl border-2 border-light-text/10">
-            <div className="p-4 h-full flex flex-col gap-2 bg-card rounded-lg shadow-md">
+            <div className="p-4 h-full flex flex-col gap-2 rounded-lg shadow-md">
                 <div className="flex justify-between">
                     <div className="flex items-center">
                         <Image
@@ -22,11 +22,11 @@ export default function HeroProfileCard() {
                             height={440}
                             src="/static/keerthan/me.png"
                             alt="Keerthan's profile"
-                            className="size-24 rounded border border-white/10 bg-primary shadow-lg"
+                            className="size-24 rounded border border-white/10 bg-primary/80 shadow-lg"
                         />
                         <div className="flex items-start justify-between h-full flex-col ml-2 md:ml-4">
-                            <span className="flex justify-evenly items-center gap-[2px]">
-                                <Badge className="bg-gray-600/10 text-green-400 border-0 px-2 py-1 animate-pulse">
+                            <span className="flex justify-evenly items-center gap-0.5">
+                                <Badge className="bg-gray-600/30 text-green-400 border-0 px-2 py-1 animate-pulse">
                                     <FaRegDotCircle size={200} /> Available to work
                                 </Badge>
                             </span>
@@ -48,7 +48,7 @@ export default function HeroProfileCard() {
                         </Link>
                     </div>
                 </div>
-                <article className="flex flex-wrap gap-2 bg-[#141414] border border-light-text/10 py-4 px-2 rounded-lg shadow-md max-h-24 overflow-y-auto scrollbar-hide">
+                <article className="flex flex-wrap gap-2 bg-[#1414148b] border border-light-text/10 py-4 px-2 rounded-lg shadow-md max-h-24 overflow-y-auto scrollbar-hide">
                     <IconBadge
                         icon={<FaMapMarkerAlt className="text-fuchsia-400" />}
                         text="Udupi, India"

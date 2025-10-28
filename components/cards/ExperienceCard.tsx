@@ -60,7 +60,7 @@ export default function ExperienceCard() {
                     {experiences.map((exp, idx) => (
                         <div
                             key={idx}
-                            className="select-none rounded-2xl border-2 border-light-text/10 p-3 mx-4 mt-2 bg-[#141414] hover:bg-icon-background/50 transition-all duration-300 group"
+                            className="select-none rounded-2xl border-2 border-light-text/10 p-3 mx-4 mt-2 bg-[#14141462] hover:bg-icon-background/50 transition-all duration-300 group"
                         >
                             <div className="relative flex flex-col justify-between gap-1">
                                 <div className="flex justify-between">
