@@ -1,6 +1,5 @@
 import PageLayout from "../layout/PageLayout";
 import CommandPalette from "@/components/common/CommandPalette";
-import { NavbarV1 } from "@/components/common/NavbarV1";
 import { Experience } from "@/components/experience";
 import { Footer } from "@/components/common/Footer";
 import AboutInfo from "@/components/about";
@@ -10,9 +9,9 @@ import { TechStack } from "@/components/tech-stack";
 export default function AboutPage() {
   return (
     <PageLayout>
-      <NavbarV1 />
       <div className="mx-auto container max-w-[1100px] lg:px-6 lg:py-16">
         <div className="bg-linear-to-b from-black/60 to-[#050505] border border-white/6 rounded-3xl p-3 md:p-8 shadow-2xl">
+          <h2 className="text-xl lg:text-3xl font-semibold text-primary mb-4">About Me</h2>
           <AboutInfo />
           <hr className="border-t-4 border-primary mt-8 mx-auto w-54" />
           <section id="experience" className="mt-8 mb-12">
