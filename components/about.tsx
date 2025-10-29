@@ -5,16 +5,16 @@ const AboutInfo = () => {
   return (
     <Fragment>
       <Image
-        src={'/static/keerthan/me-blue.png'}
+        src={'/static/keerthan/about.png'}
         width={200}
         height={200}
         alt="about image"
-        className="mx-auto mb-3 grayscale hover:grayscale-0 transition duration-300 ease-in-out "
+        className="mx-auto mb-3 hover:grayscale rounded-md transition duration-300 ease-in-out "
         priority
       />
       <div className="flex flex-wrap justify-center items-baseline gap-2 text-gray-300 text-sm md:text-lg">
         Hi there! I&apos;m
-        <h1 className="text-2xl text-secondary font-semibold">
+        <h1 className="text-lg lg:text-2xl text-secondary font-semibold">
           Keerthan NS
         </h1>
       </div>

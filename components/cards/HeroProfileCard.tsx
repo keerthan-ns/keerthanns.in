@@ -20,9 +20,9 @@ export default function HeroProfileCard() {
                         <Image
                             width={240}
                             height={440}
-                            src="/static/keerthan/me.png"
+                            src="/static/keerthan/profile-photo.png"
                             alt="Keerthan's profile"
-                            className="size-24 rounded border border-white/10 bg-primary/80 shadow-lg"
+                            className="size-24 rounded border border-white/10 shadow-lg"
                         />
                         <div className="flex items-start justify-between h-full flex-col ml-2 md:ml-4">
                             <span className="flex justify-evenly items-center gap-0.5">
