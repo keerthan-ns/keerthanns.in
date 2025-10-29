@@ -21,7 +21,7 @@ export const IconBadge: React.FC<IconBadgeProps> = ({
     });
 
     return (
-        <div className={"flex items-center justify-center gap-2 px-2 py-3" + className}>
+        <div className={"flex items-center justify-center gap-2 px-2 " + className}>
             {iconWithProps}
             {text}
         </div>

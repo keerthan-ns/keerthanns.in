@@ -46,7 +46,7 @@ export default function ExperienceCard() {
                     <IconBadge
                         icon={<FaSuitcase className="text-primary" />}
                         text={"Experience"}
-                        className="py-2 font-medium"
+                        className="font-medium"
                         iconSize={18}
                     />
                     <p className="text-sm text-neutral-400">Work Showcase</p>

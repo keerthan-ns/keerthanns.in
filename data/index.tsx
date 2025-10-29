@@ -14,25 +14,25 @@ export const socialsWithIcons = [
     name: 'Github',
     href: socials.github,
     icon: () => (
-      <BsGithub className="w-5 h-5 hover:animate-wiggle hover:text-white" />
+      <BsGithub className="w-4 h-4 hover:animate-wiggle hover:text-white" />
     ),
   }, {
     name: 'LinkedIn',
     href: socials.linkedin,
     icon: () => (
-      <BsLinkedin className="w-5 h-5 hover:animate-wiggle hover:text-white" />
+      <BsLinkedin className="w-4 h-4 hover:animate-wiggle hover:text-white" />
     ),
   }, {
     name: 'Instagram',
     href: socials.instagram,
     icon: () => (
-      <BsInstagram className="w-5 h-5 hover:animate-wiggle hover:text-white" />
+      <BsInstagram className="w-4 h-4 hover:animate-wiggle hover:text-white" />
     ),
   }, {
     name: 'Twitter',
     href: socials.twitter,
     icon: () => (
-      <BsTwitterX className="w-5 h-5 hover:animate-wiggle hover:text-white" />
+      <BsTwitterX className="w-4 h-4 hover:animate-wiggle hover:text-white" />
     ),
   }
 ]

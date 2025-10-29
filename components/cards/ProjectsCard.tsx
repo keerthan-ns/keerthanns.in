@@ -17,7 +17,7 @@ export default function ProjectsCard() {
                         <IconBadge
                             icon={<GrProjects className="text-primary" />}
                             text={"Projects"}
-                            className="py-2 font-medium"
+                            className="font-medium"
                             iconSize={18}
                         />
                         <p className="text-sm text-neutral-400">Works Gallery</p>
@@ -53,7 +53,7 @@ export default function ProjectsCard() {
                         <IconBadge
                             icon={<GrProjects className="text-primary" />}
                             text={"Projects"}
-                            className="py-2 font-medium"
+                            className="font-medium"
                             iconSize={18}
                         />
                         <p className="text-sm text-neutral-400">Works Gallery</p>

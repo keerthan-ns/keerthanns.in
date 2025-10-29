@@ -35,7 +35,7 @@ export default function SocialsCard() {
           <IconBadge
             icon={<BsRocketTakeoffFill className="text-primary" />}
             text={"Follow Me"}
-            className="py-2 font-medium text-neutral-400"
+            className="py-1 font-medium text-neutral-400"
             iconSize={18}
           />
           <p className="text-sm text-white">Online Presence</p>
@@ -43,11 +43,11 @@ export default function SocialsCard() {
             {socialsWithIcons.map((social) => (
               <Link
                 key={social.name} href={social.href} target="_blank"
-                className="text-neutral-400 bg-slate-500/20 py-1 px-2 rounded-md hover:text-white transition-colors duration-300"
+                className="text-neutral-400 bg-slate-500/20 py-1 px-2 text-sm rounded-md hover:text-white transition-colors duration-300"
               >
                 <div className="flex justify-start items-center gap-1">
                   <social.icon />
-                  <h3 className="font-medium text-md">{social.name}</h3>
+                  <h3 className="font-medium">{social.name}</h3>
                 </div>
               </Link>
             ))}
@@ -77,19 +77,19 @@ export default function SocialsCard() {
           <IconBadge
             icon={<BsRocketTakeoffFill className="text-primary" />}
             text={"Follow Me"}
-            className="py-2 font-medium text-neutral-400"
+            className="py-1 font-medium text-neutral-400"
             iconSize={18}
           />
           <p className="text-sm text-white">Online Presence</p>
-          <div className="flex flex-wrap justify-center items-center gap-2 pt-3 px-2">
+          <div className="flex flex-wrap justify-center items-center gap-2 pt-5 px-2">
             {socialsWithIcons.map((social) => (
               <Link
                 key={social.name} href={social.href} target="_blank"
-                className="text-neutral-400 bg-slate-500/20 py-2 px-2 rounded-md hover:text-white transition-colors duration-300"
+                className="text-neutral-400 bg-slate-500/20 py-1 px-2 text-sm rounded-md hover:text-white transition-colors duration-300"
               >
                 <div className="flex justify-start items-center gap-1">
                   <social.icon />
-                  <h3 className="font-medium text-md">{social.name}</h3>
+                  <h3 className="font-medium">{social.name}</h3>
                 </div>
               </Link>
             ))}

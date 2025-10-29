@@ -47,7 +47,7 @@ export default function TechStackMobileCard() {
                         <IconBadge
                             icon={<BsStack className="text-primary" />}
                             text={"Tech Stack"}
-                            className="py-2 font-medium"
+                            className="font-medium"
                             iconSize={18}
                         />
                         <p className="text-sm text-neutral-400">Technologies I&apos;ve Mastered</p>
