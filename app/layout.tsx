@@ -5,6 +5,7 @@ import Providers from "./providers";
 import Script from "next/script";
 import { socials } from "@/data";
 import { Analytics } from '@vercel/analytics/next';
+import { SpeedInsights } from "@vercel/speed-insights/next"
 
 const SITE_URL = process.env.NEXT_PUBLIC_BASE_URL || "https://keerthanns.in";
 const SITE_NAME = "Keerthan NS - Portfolio";
@@ -123,6 +124,7 @@ export default function RootLayout({
           {children}
         </Providers>
         <Analytics/>
+        <SpeedInsights/>
       </body>
     </html>
   );
