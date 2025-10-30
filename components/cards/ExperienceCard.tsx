@@ -34,7 +34,7 @@ export default function ExperienceCard() {
 
     return (
         <div
-            className="xl:col-span-2 xl:row-span-4 xl:row-start-4 bg-card-background rounded-2xl border-2 border-light-text/10"
+            className="xl:col-span-2 xl:row-span-4 xl:row-start-4 rounded-2xl border-2 border-light-text/10"
             onMouseEnter={() => !isTouchDevice && setIsHovered(true)}
             onMouseLeave={() => !isTouchDevice && setIsHovered(false)}
             onFocus={() => !isTouchDevice && setIsHovered(true)}
