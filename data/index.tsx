@@ -130,7 +130,7 @@ export const projects = [
     description: 'My personal portfolio website built with Next.js, TypeScript, and TailwindCSS, showcasing projects and skills.',
     github: 'https://github.com/keerthan-ns/keerthanns.in/',
     link: 'https://keerthanns.in/',
-    img: "https://res.cloudinary.com/dg7etzwks/image/upload/v1688752957/portfolioProjects/portPro_b6lsrl.png",
+    img: "https://res.cloudinary.com/dg7etzwks/image/upload/v1761831376/portfolioProjects/portfolio_phdccq.png",
     tags: ['Next.js[App Router]', 'Typescript', 'TailwindCSS', 'Aceternity UI', 'Hero UI']
   },
   {
@@ -177,4 +177,5 @@ export const techStacks = [
   { name: 'Docker', src: '/static/stacks/docker.svg' },
   { name: 'Kubernetes', src: '/static/stacks/kubernetes.svg' },
   { name: 'Jenkins', src: '/static/stacks/jenkins.svg' },
+
 ]
