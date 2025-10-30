@@ -7,6 +7,7 @@ import { projects } from "@/data";
 import Link from "next/link";
 import { FaAnglesRight } from "react-icons/fa6";
 import { GrProjects } from "react-icons/gr";
+import Image from "next/image";
 
 export default function ProjectsCard() {
     return (
@@ -23,17 +24,28 @@ export default function ProjectsCard() {
                         <p className="text-sm text-neutral-400">Works Gallery</p>
                     </div>
                     <div className="relative mt-4 h-28 md:h-42 overflow-hidden">
-                        <Marquee pauseOnHover className="[--duration:20s]">
-                            {
-                                projects.slice(0, 4).map((project, index) => (
-                                    <div key={index} className="md:inline-block">
-                                        <a href={project.github ? project.github : project.link} target="_blank" rel="noopener noreferrer" aria-label={`${project.title}`}
-                                            className="block rounded-2xl w-full h-28 md:w-44 md:h-32 overflow-hidden hover:scale-105 hover:shadow-lg hover:border-theme-primary transition-transform duration-300">
-                                            <img src={project.img} className="object-cover h-full w-full" alt={`${project.title}`} />
-                                        </a>
-                                    </div>
-                                ))
-                            }
+                         <Marquee pauseOnHover className="[--duration:20s]">
+                            {projects.slice(0, 4).map((project, index) => (
+                            <div key={index} className="md:inline-block">
+                                <a
+                                href={project.github ? project.github : project.link}
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                aria-label={project.title}
+                                className="block rounded-2xl w-full h-28 md:w-44 md:h-32 overflow-hidden hover:scale-105 hover:shadow-lg hover:border-theme-primary transition-transform duration-300"
+                                >
+                                <Image
+                                    src={`${project.img}?w=176&h=128&fit=crop`}
+                                    alt={project.title}
+                                    width={176}    // max width for md:w-44
+                                    height={128}   // max height for md:h-32
+                                    className="object-cover w-full h-full"
+                                    sizes="(max-width: 768px) 112px, 176px"
+                                    quality={75}
+                                />
+                                </a>
+                            </div>
+                            ))}
                         </Marquee>
                         <div className="from-background pointer-events-none absolute inset-y-0 left-0 w-1/4 bg-linear-to-r"></div>
                         <div className="from-background pointer-events-none absolute inset-y-0 right-0 w-1/4 bg-linear-to-l"></div>
@@ -60,16 +72,27 @@ export default function ProjectsCard() {
                     </div>
                     <div className="relative mt-4 h-42 overflow-hidden">
                         <Marquee pauseOnHover className="[--duration:20s]">
-                            {
-                                projects.slice(0, 4).map((project, index) => (
-                                    <div key={index} className="md:inline-block">
-                                        <a href={project.link ? project.link : project.github} target="_blank" rel="noopener noreferrer" aria-label={`${project.title}`}
-                                            className="block rounded-2xl w-full h-28 md:w-44 md:h-32 overflow-hidden hover:scale-105 hover:shadow-lg hover:border-theme-primary transition-transform duration-300">
-                                            <img src={project.img} className="object-cover h-full w-full" alt={`${project.title}`} />
-                                        </a>
-                                    </div>
-                                ))
-                            }
+                            {projects.slice(0, 4).map((project, index) => (
+                                <div key={index} className="md:inline-block">
+                                    <a
+                                        href={project.link ? project.link : project.github}
+                                        target="_blank"
+                                        rel="noopener noreferrer"
+                                        aria-label={project.title}
+                                        className="block rounded-2xl w-full h-28 md:w-44 md:h-32 overflow-hidden hover:scale-105 hover:shadow-lg hover:border-theme-primary transition-transform duration-300"
+                                    >
+                                        <Image
+                                            src={`${project.img}?w=176&h=128&fit=crop`}
+                                            alt={project.title}
+                                            width={176}   // max width used in md:w-44 (~176px)
+                                            height={128}  // max height used in md:h-32 (~128px)
+                                            className="object-cover w-full h-full"
+                                            sizes="(max-width: 768px) 112px, 176px" 
+                                            quality={75}
+                                        />
+                                    </a>
+                                </div>
+                            ))}
                         </Marquee>
                         <div className="from-background pointer-events-none absolute inset-y-0 left-0 w-1/4 bg-linear-to-r"></div>
                         <div className="from-background pointer-events-none absolute inset-y-0 right-0 w-1/4 bg-linear-to-l"></div>

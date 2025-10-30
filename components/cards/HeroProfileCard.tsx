@@ -18,11 +18,13 @@ export default function HeroProfileCard() {
                 <div className="flex justify-between">
                     <div className="flex items-center">
                         <Image
-                            width={240}
-                            height={440}
                             src="/static/keerthan/profile-photo.png"
                             alt="Keerthan's profile"
-                            className="size-24 rounded border border-white/10 shadow-lg"
+                            width={120}
+                            height={120}
+                            className="w-16 md:w-24 rounded border border-white/10 shadow-lg"
+                            priority
+                            sizes="(max-width: 768px) 64px, 96px"
                         />
                         <div className="flex items-start justify-between h-full flex-col ml-2 md:ml-4">
                             <span className="flex justify-evenly items-center gap-0.5">
@@ -40,9 +42,11 @@ export default function HeroProfileCard() {
                         </div>
                     </div>
                     <div className="font-medium text-sm">
-                        <Link href={socials.resume} target="_blank">
-                            <Button variant="link" className="cursor-pointer text-white hover:no-underline flex items-center justify-center gap-2 bg-white/10 transition-all duration-300 group">
-                                <span className="hidden xl:block">Resume</span>{" "}
+                        <Link href={socials.resume} target="_blank" rel="noopener noreferrer">
+                            <Button variant="link" aria-label="View Resume"
+                                className="cursor-pointer text-white hover:no-underline flex items-center justify-center gap-2 bg-white/10 transition-all duration-300 group"
+                            >
+                                <span className="hidden xl:block">Resume</span>
                                 <IoDocumentText size={20} className="group-hover:animate-bounce" />
                             </Button>
                         </Link>

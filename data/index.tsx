@@ -168,7 +168,7 @@ export const projects = [
 export const techStacks = [
   { name: 'Java', src: '/static/stacks/java.svg' },
   { name: 'Typescript', src: '/static/stacks/typescript.svg' },
-  { name: 'Next.js', src: '/static/stacks/Next.js.svg' },
+  { name: 'Next.js', src: '/static/stacks/nextjs.svg' },
   { name: 'React.js', src: '/static/stacks/react.svg' },
   { name: 'Tailwind', src: '/static/stacks/tailwind.svg' },
   { name: 'Spring boot', src: '/static/stacks/springboot.svg' },
