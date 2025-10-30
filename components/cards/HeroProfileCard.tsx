@@ -27,11 +27,10 @@ export default function HeroProfileCard() {
                             sizes="(max-width: 768px) 64px, 96px"
                         />
                         <div className="flex items-start justify-between h-full flex-col ml-2 md:ml-4">
-                            <span className="flex justify-evenly items-center gap-0.5">
-                                <Badge className="bg-gray-600/30 text-green-400 border-0 px-2 py-1 animate-pulse">
-                                    <FaRegDotCircle size={200} /> Available to work
-                                </Badge>
-                            </span>
+                            <Badge className="bg-gray-700/60 text-green-300 border-0 px-2 py-1 animate-pulse">
+                                <FaRegDotCircle size={12} className="text-green-400" />
+                                Available to work
+                            </Badge>
                             <h3 className="font-semibold text-xl text-dark-text">
                                 Keerthan NS
                             </h3>
