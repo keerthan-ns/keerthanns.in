@@ -45,8 +45,9 @@ export const experiences = [
     website: "https://www.edgeverve.com/",
     logo: "finacle.png",
     period: "Aug 2024- Present",
-    description: `• Gained hands-on experience in UI/UX development using ReactJS, Typescript, HTML5, CSS, JS
-            • Worked on DevOps and deployment automation using Jenkins, Docker, and Kubernetes`,
+    description: `• Gained hands-on experience in UI/UX development using ReactJS, Typescript, HTML5, CSS, JS.
+            • Worked on DevOps and deployment automation using Jenkins, Docker, and Kubernetes.
+            • Developed internal tools that improved developer productivity and reduced API development time by 30%.`,
   }, {
     title: "Product Engineer Intern",
     company: "Edgeverve Systems",
@@ -54,7 +55,9 @@ export const experiences = [
     website: "https://www.edgeverve.com/",
     logo: "edgeverve.png",
     period: "Feb 2024- Jul 2024",
-    description: `• Worked on Spring batch framework to improve the performance of existing batch jobs.`,
+    description: `• Built and maintained 5+ Spring Boot batch jobs and microservices, and developed RESTful APIs for a
+            banking application handling high-volume transactions.
+            • Implemented unit tests using JUnit and Mockito, achieving 80% code coverage.`,
   }, {
     title: "Software Developer Intern",
     company: "Inspirante Technology Pvt. Ltd",
@@ -116,6 +119,13 @@ export const projects = [
     tags: ['NextJS', 'Typescript', 'Tailwindcss', 'Prisma', 'tRPC', 'NextAuth', 'Supabase']
   },
   {
+    title: 'Abhijinya Services',
+    description: 'Revamped the Abhijnya Education website, a Mangalore-based service under the Abhijnya Services. Designed and developed Abhijnya Physiotherapy service site under the same built as a static web application using a modern, theme-based design approach.',
+    link: 'https://www.abhijnya.com/',
+    img: "https://res.cloudinary.com/dg7etzwks/image/upload/v1761797862/portfolioProjects/abhijServices_xwnkix.png",
+    tags: ['NextJS[Page Router]', 'Typescript', 'Tailwindcss', ' NodeMailer', 'ShadCN UI']
+  },
+  {
     title: 'Inspirante Technologies',
     description: 'Inspirante Technologies Pvt Ltd provides Software-as-a-Service [SAAS] ERP solutions. I have revamped the website by adding recaptcha, auto-mail system features and validations.',
     link: 'https://inspirantech.in/',
@@ -123,7 +133,7 @@ export const projects = [
     tags: ['Html', 'css', 'Bootstrap', 'Javascript', 'Php']
   },
   {
-    title: 'Abhijinya Education',
+    title: 'Abhijinya Education [currently Abhijnya Services]',
     description: 'A static website built while an web development intern in Inspirante Technologies Pvt.Ltd. Abhijinya Education Services offers Aptitude training, Soft skills, Workshops, Seminars, Job preparation techniques & Personality development programs.',
     link: 'https://abhijnyaeducation.com/',
     img: "https://res.cloudinary.com/dg7etzwks/image/upload/v1683852442/portfolioProjects/udibcop7esvui5bylgy8.png",

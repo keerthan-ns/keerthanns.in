@@ -28,7 +28,7 @@ const WideProjectCard = ({
                 <Image
                     alt="Blog Image"
                     src={image}
-                    className="-mb-10 md:mb-0 w-full h-full object-cover rounded-xl object-center"
+                    className="mb-0 w-full h-full object-cover rounded-xl object-center"
                     width={400}
                     height={400}
                 />
@@ -48,7 +48,7 @@ const WideProjectCard = ({
                             ))}
                         </div>
 
-                        <p className="line-clamp-3 text-sm/relaxed text-gray-300">{desc}</p>
+                        <p className="line-clamp-4 text-sm/relaxed text-gray-300">{desc}</p>
                     </div>
 
                     <div className="flex flex-col md:flex-row gap-0 md:gap-5 items-center justify-start pb-5 pl-5">
