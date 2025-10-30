@@ -6,6 +6,42 @@ import WorkSection from "@/components/work";
 import { Suspense } from "react";
 import { LoaderOne } from "@/components/ui/loader";
 import BreadNavigation from "@/components/common/BreadNavigation";
+import { Metadata } from "next";
+
+const SITE_URL = process.env.NEXT_PUBLIC_BASE_URL || "https://keerthanns.in";
+
+export const metadata: Metadata = {
+  title: "My Work | Keerthan NS",
+  description:
+    "Explore the projects and work of Keerthan NS — a Full Stack Developer skilled in Next.js, React, TypeScript, Java, Spring Boot, and modern DevOps tools.",
+  alternates: {
+    canonical: `${SITE_URL}/work`,
+  },
+  openGraph: {
+    title: "Keerthan NS - My Work (Full Stack Developer)",
+    description:
+      "Showcase of projects and work by Keerthan NS, demonstrating expertise in full stack development with Next.js, React, TypeScript, and Spring Boot.",
+    url: `${SITE_URL}/work`,
+    siteName: "Keerthan NS - Portfolio",
+    images: [
+      {
+        url: `${SITE_URL}/static/others/portfolio.png`,
+        width: 1200,
+        height: 630,
+        alt: "Keerthan NS Portfolio - Work Page",
+      },
+    ],
+    locale: "en_US",
+    type: "website",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "My Work - Keerthan NS (Full Stack Developer)",
+    description:
+      "Discover the projects and work of Keerthan NS, showcasing full stack expertise and creative solutions.",
+    images: [`${SITE_URL}/static/others/portfolio.png`],
+  },
+}
 
 export default function WorkPage() {
   return (

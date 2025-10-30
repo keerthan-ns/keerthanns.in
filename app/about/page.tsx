@@ -6,6 +6,42 @@ import AboutInfo from "@/components/about";
 import { Education } from "@/components/education";
 import { TechStack } from "@/components/tech-stack";
 import BreadNavigation from "@/components/common/BreadNavigation";
+import { Metadata } from "next";
+
+const SITE_URL = process.env.NEXT_PUBLIC_BASE_URL || "https://keerthanns.in";
+
+export const metadata: Metadata = {
+  title: "About Me | Keerthan NS",
+  description:
+    "Learn more about Keerthan NS — a Full Stack Developer skilled in Next.js, React, TypeScript, Java, Spring Boot, and modern DevOps tools. Discover his experience, education, and tech stack.",
+  alternates: {
+    canonical: `${SITE_URL}/about`,
+  },
+  openGraph: {
+    title: "About Keerthan NS - Full Stack Developer",
+    description:
+      "Explore the background, education, and work experience of Keerthan NS — a Full Stack Developer crafting modern digital experiences with Next.js, React, TypeScript, and Spring Boot.",
+    url: `${SITE_URL}/about`,
+    siteName: "Keerthan NS - Portfolio",
+    images: [
+      {
+        url: `${SITE_URL}/static/others/portfolio.png`,
+        width: 1200,
+        height: 630,
+        alt: "Keerthan NS - About Page",
+      },
+    ],
+    locale: "en_US",
+    type: "profile",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "About Keerthan NS - Full Stack Developer",
+    description:
+      "Get to know Keerthan NS — a Full Stack Developer with expertise in Next.js, React, TypeScript, Java, and Spring Boot.",
+    images: [`${SITE_URL}/static/others/portfolio.png`],
+  },
+};
 
 export default function AboutPage() {
   return (
