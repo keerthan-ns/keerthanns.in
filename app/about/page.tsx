@@ -11,7 +11,7 @@ import { Metadata } from "next";
 const SITE_URL = process.env.NEXT_PUBLIC_BASE_URL || "https://keerthanns.in";
 
 export const metadata: Metadata = {
-  title: "About Me | Keerthan NS",
+  title: "About Me",
   description:
     "Learn more about Keerthan NS — a Full Stack Developer skilled in Next.js, React, TypeScript, Java, Spring Boot, and modern DevOps tools. Discover his experience, education, and tech stack.",
   alternates: {

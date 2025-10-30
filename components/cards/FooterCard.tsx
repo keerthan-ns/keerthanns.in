@@ -1,16 +1,35 @@
+import Image from "next/image";
 import { Fragment } from "react/jsx-runtime";
 
 export default function FooterCard() {
     return (
         <Fragment>
-            <div className="hidden xl:flex flex-col justify-center xl:col-span-3 xl:row-span-1 xl:col-start-3 xl:row-start-7 p-2 text-sm font-light rounded-2xl border-2 border-light-text/10">
-                <div>Press <kbd className="opacity-50 bg-slate-500/30 p-1 rounded">Ctrl</kbd> + <kbd className="opacity-50 bg-slate-500/30 p-1 rounded">K</kbd> to open the command palette</div>
-                <p className="text-sm font-medium text-slate-200">
-                    &copy; {new Date().getFullYear()} {'Keerthan N S'}
-                </p>
+            <div className="hidden xl:flex flex-row justify-center gap-2 items-center xl:col-span-3 xl:row-span-1 xl:col-start-3 xl:row-start-7 p-2 text-sm font-light rounded-2xl border-2 border-light-text/10">
+                <Image
+                    src={"/favicon/android-chrome-512x512.png"}
+                    height={20}
+                    width={20}
+                    alt="Keerthan NS Portfolio logo"
+                    className="size-10"
+                    />
+                <div className="flex flex-col">
+                    <div>Press <kbd className="opacity-50 bg-slate-500/30 p-1 rounded">Ctrl</kbd> + <kbd className="opacity-50 bg-slate-500/30 p-1 rounded">K</kbd> to open the command palette</div>
+                    <p className="text-sm font-medium text-slate-200">
+                        &copy; {new Date().getFullYear()} {'Keerthan N S'}
+                    </p>
+                </div>
             </div>
-            <div className="md:col-span-2 xl:hidden xl:col-span-2 xl:row-span-3">
-                &copy; {new Date().getFullYear()} {'Keerthan N S'}
+            <div className="md:col-span-2 xl:hidden xl:col-span-2 xl:row-span-3 flex flex-row justify-center items-center gap-2 text-sm">
+                <Image
+                    src={"/favicon/android-chrome-512x512.png"}
+                    height={20}
+                    width={20}
+                    alt="Keerthan NS Portfolio logo"
+                    className="size-10"
+                    />
+                <span>
+                    &copy; {new Date().getFullYear()} {'Keerthan N S'}
+                </span>
             </div>
         </Fragment>
     );

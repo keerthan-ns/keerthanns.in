@@ -65,9 +65,9 @@ export const experiences = [
     website: "https://inspirantech.in/",
     logo: "inspirante.jpeg",
     period: "Aug 2022-Feb 2024",
-    description: `• Gained experience in UI development using NextJS, Typescript along with Prisma ORM and GraphQL. 
+    description: `• Gained experience in UI development using Next.js, Typescript along with Prisma ORM and GraphQL. 
             • Developed a full- stack web application for Anugraha coaching using t3 stack.
-            • Revamped the company website and Abhijnya services website using a modern theme (NextJS).`,
+            • Revamped the company website and Abhijnya services website using a modern theme (Next.js).`,
   }, {
     title: "Web Development Intern",
     company: "Vitvara Technology",
@@ -102,28 +102,36 @@ export const projects = [
     github: 'https://github.com/incridea-nmamit/incridea-client/tree/2023',
     link: 'http://incridea.in',
     img: "https://res.cloudinary.com/dg7etzwks/image/upload/v1683852443/portfolioProjects/uqau9y2uttv5ma9wjqa1.png",
-    tags: ['Nextjs', 'TypeScript', 'TailwindCSS', 'GraphQl', 'Prisma']
+    tags: ['Next.js', 'TypeScript', 'TailwindCSS', 'GraphQl', 'Prisma']
   }, {
     title: 'Incridea-2024',
     description: 'Website for the annual techno-cultural fest of NMAMIT, called Incridea. Worked in team of 24. The website was visited by over 5000+ people throughout the duration of the fest.',
     github: 'https://github.com/incridea-nmamit/incridea-client/tree/2024',
     link: 'http://incridea.in',
     img: "https://res.cloudinary.com/dg7etzwks/image/upload/v1717234994/portfolioProjects/nuasdlmme1hwy6n8evki.png",
-    tags: ['Nextjs', 'TypeScript', 'TailwindCSS', 'GraphQl', 'Prisma']
+    tags: ['Next.js', 'TypeScript', 'TailwindCSS', 'GraphQl', 'Prisma']
   },
   {
     title: 'Anugraha coaching',
     description: 'Anugraha Online Coaching Center is built with the T3 stack. It supports English and Kannada languages. Students can submit details and payment proof, which the admin can verify and manage. Automatic mail confirmation feature.',
     link: 'https://anugraha.vercel.app',
     img: "https://res.cloudinary.com/dg7etzwks/image/upload/v1705248952/portfolioProjects/anugraha_o1932k.png",
-    tags: ['NextJS', 'Typescript', 'Tailwindcss', 'Prisma', 'tRPC', 'NextAuth', 'Supabase']
+    tags: ['Next.js', 'Typescript', 'Tailwindcss', 'Prisma', 'tRPC', 'NextAuth', 'Supabase']
   },
   {
     title: 'Abhijinya Services',
     description: 'Revamped the Abhijnya Education website, a Mangalore-based service under the Abhijnya Services. Designed and developed Abhijnya Physiotherapy service site under the same built as a static web application using a modern, theme-based design approach.',
     link: 'https://www.abhijnya.com/',
     img: "https://res.cloudinary.com/dg7etzwks/image/upload/v1761797862/portfolioProjects/abhijServices_xwnkix.png",
-    tags: ['NextJS[Page Router]', 'Typescript', 'Tailwindcss', ' NodeMailer', 'ShadCN UI']
+    tags: ['Next.js[Page Router]', 'Typescript', 'Tailwindcss', ' NodeMailer', 'ShadCN UI']
+  },
+  {
+    title: 'My Portfolio (Current)',
+    description: 'My personal portfolio website built with Next.js, TypeScript, and TailwindCSS, showcasing projects and skills.',
+    github: 'https://github.com/keerthan-ns/keerthanns.in/',
+    link: 'https://keerthanns.in/',
+    img: "https://res.cloudinary.com/dg7etzwks/image/upload/v1688752957/portfolioProjects/portPro_b6lsrl.png",
+    tags: ['Next.js[App Router]', 'Typescript', 'TailwindCSS', 'Aceternity UI', 'Hero UI']
   },
   {
     title: 'Inspirante Technologies',
@@ -133,7 +141,7 @@ export const projects = [
     tags: ['Html', 'css', 'Bootstrap', 'Javascript', 'Php']
   },
   {
-    title: 'Abhijinya Education [currently Abhijnya Services]',
+    title: 'Abhijinya Education (currently Abhijnya Services)',
     description: 'A static website built while an web development intern in Inspirante Technologies Pvt.Ltd. Abhijinya Education Services offers Aptitude training, Soft skills, Workshops, Seminars, Job preparation techniques & Personality development programs.',
     link: 'https://abhijnyaeducation.com/',
     img: "https://res.cloudinary.com/dg7etzwks/image/upload/v1683852442/portfolioProjects/udibcop7esvui5bylgy8.png",
@@ -145,23 +153,23 @@ export const projects = [
     github: 'https://github.com/keerthan-ns/portfolio',
     link: 'https://keerthanns-v1.vercel.app/',
     img: "https://res.cloudinary.com/dg7etzwks/image/upload/v1688752957/portfolioProjects/portPro_b6lsrl.png",
-    tags: ['ReactJS', 'css', 'TailwindCSS']
+    tags: ['React.js', 'css', 'TailwindCSS', 'Three.js']
   },
   {
     title: 'VChat',
-    description: 'The Vchat(Instagram clone) is a user-friendly web-application. The website has a modern, responsive design, and uses a combination of technologies such as ReactJs and MongoDB to provide a smooth and seamless user experience.',
+    description: 'The Vchat(Instagram clone) is a user-friendly web-application. The website has a modern, responsive design, and uses a combination of technologies such as ReactJS and MongoDB to provide a smooth and seamless user experience.',
     github: 'https://github.com/keerthan-ns/Vchat',
     link: 'https://vchat-now.vercel.app/',
     img: "https://res.cloudinary.com/dg7etzwks/image/upload/v1683852442/portfolioProjects/wxp6qwy2qw9beyygziog.png",
-    tags: ['ReactJS', 'css/scss', 'Django', 'MongoDB']
+    tags: ['React.js', 'css/scss', 'Django', 'MongoDB']
   }
 ]
 
 export const techStacks = [
   { name: 'Java', src: '/static/stacks/java.svg' },
   { name: 'Typescript', src: '/static/stacks/typescript.svg' },
-  { name: 'Next.js', src: '/static/stacks/nextjs.svg' },
-  { name: 'ReactJs', src: '/static/stacks/react.svg' },
+  { name: 'Next.js', src: '/static/stacks/Next.js.svg' },
+  { name: 'React.js', src: '/static/stacks/react.svg' },
   { name: 'Tailwind', src: '/static/stacks/tailwind.svg' },
   { name: 'Spring boot', src: '/static/stacks/springboot.svg' },
   { name: 'NodeJs', src: '/static/stacks/nodejs.svg' },

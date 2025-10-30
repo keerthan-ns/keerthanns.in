@@ -26,7 +26,7 @@ const Tabs = () => {
         Projects
       </p>
       <p onClick={() => changeTab('shots')} className={style(current === 'shots')}>
-        Shots
+        ...
       </p>
     </Fragment>
   );
