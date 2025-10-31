@@ -1,36 +1,72 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# 🌐 Personal Portfolio Website – [keerthanns.in](https://keerthanns.in)
 
-## Getting Started
+<img src="https://res.cloudinary.com/dg7etzwks/image/upload/v1688752957/portfolioProjects/portfolio_phdccq.png" alt="Portfolio Preview" width="700" />
 
-First, run the development server:
+A modern, high-performance **personal portfolio website** built using **Next.js**, **TypeScript**, and **TailwindCSS**.  
+It showcases my skills, projects, achievements, and experience as a **Full-Stack Developer** — designed with a dark, elegant theme and optimized for SEO and accessibility.
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+---
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## 🚀 Features
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+- ⚡ **Blazing Fast Performance** – Lighthouse score: 98–100 across all metrics (Performance, SEO, Accessibility, Best Practices)  
+- 🎨 **Modern UI/UX** – Built with **TailwindCSS**, **ShadCN UI**, and **HeroUI**  
+- 🧠 **TypeScript + Next.js (App Router)** – Clean, scalable code structure
+- 📱 **Fully Responsive** – Looks great on desktop, tablet, and mobile  
+- 🧩 **Reusable Components** – Clean component architecture for easy updates  
+- 🔍 **SEO Ready** – Metadata, sitemap, and structured data included  
+- 🧾 **Vercel Analytics + Speed Insights** integrated for monitoring performance
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+---
 
-## Learn More
+## 🛠️ Tech Stack
 
-To learn more about Next.js, take a look at the following resources:
+| Category | Technologies |
+|-----------|---------------|
+| **Frontend** | Next.js 14 (App Router), React 18, TypeScript |
+| **Styling** | TailwindCSS, ShadCN UI, HeroUI |
+| **Image Handling** | Cloudinary + Next.js Image Optimization |
+| **Deployment** | Vercel for deployment, Hostinger for domain |
+| **Performance** | Vercel Analytics, Lighthouse Optimization |
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+---
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+## ⚙️ Setup and Installation
 
-## Deploy on Vercel
+1. **Clone the repository**
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+   ```bash
+   git clone https://github.com/keerthan-ns/keerthanns.in.git portfolio
+   ```
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+2. **Navigate to the project directory** 
+    ```sh
+    cd portfolio
+    ```
+3. **Install the dependencies** 
+    ```sh
+    npm install
+    ```
+4. **Run the development server** 
+    ```sh
+    npm run dev
+    ```
+5. **Open your browser and visit** 
+    ```sh
+    http://localhost:3000
+    ```
+
+## 🌟 Connect with Me
+- Linkedin - [@keerthan-ns](https://www.linkedin.com/in/keerthan-ns/)
+- Website - [Keerthan NS](https://www.keerthanns.in/)
+- Instrgram - [@Keerthan_ns](https://instagram.com/keerthan_ns)
+
+## 🧾 License
+
+This project is licensed under the [Apache License 2.0](https://github.com/keerthan-ns/keerthanns.in/blob/master/LICENSE).
+
+Copyright © 2025 Keerthan NS.  
+Licensed under the Apache License, Version 2.0 (the "License");  
+you may not use this file except in compliance with the License.  
+See the [LICENSE](./LICENSE) file for details.
+
