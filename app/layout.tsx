@@ -116,6 +116,21 @@ export default function RootLayout({
             }),
           }}
         />
+        {/* for logo purpose */}
+        <Script
+          id="organization-schema"
+          type="application/ld+json"
+          strategy="afterInteractive"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify({
+              "@context": "https://schema.org",
+              "@type": "Organization",
+              name: "Keerthan NS",
+              url: SITE_URL,
+              logo: `${SITE_URL}/favicon/android-chrome-512x512.png`,
+            }),
+          }}
+        />
       </head>
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
