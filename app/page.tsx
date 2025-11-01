@@ -12,17 +12,17 @@ import CommandPalette from "@/components/common/CommandPalette";
 export default function Home() {
   return (
     <PageLayout>
-          <div className="select-none grid gap-3 md:grid-cols-2 xl:grid-cols-7 xl:grid-rows-7 xl:gap-2 text-dark-text text-center">
-            <HeroProfileCard />
-            <TechStackCard />
-            <ExperienceCard />
-            <ProjectsCard />
-            <TechStackMobileCard />
-            <BlogCard />
-            <SocialsCard />
-            <FooterCard />
-            <CommandPalette />
-          </div>
-        </PageLayout>
+      <div className="select-none grid gap-3 md:grid-cols-2 xl:grid-cols-7 xl:grid-rows-7 xl:gap-2 text-dark-text text-center">
+        <HeroProfileCard />
+        <TechStackCard />
+        <ExperienceCard />
+        <ProjectsCard />
+        <TechStackMobileCard />
+        <BlogCard />
+        <SocialsCard />
+        <FooterCard />
+        <CommandPalette />
+      </div>
+    </PageLayout>
   );
 }

@@ -31,9 +31,9 @@ export default function HeroProfileCard() {
                                 <FaRegDotCircle size={12} className="text-green-400" />
                                 Available to work
                             </Badge>
-                            <h3 className="font-semibold text-xl text-dark-text">
+                            <h1 className="font-semibold text-xl text-dark-text">
                                 Keerthan NS
-                            </h3>
+                            </h1>
                             <p className="font-semibold text-sm text-primary">
                                 <span className="text-white">I&apos;m a</span>{" "}
                                 Full-Stack Developer
