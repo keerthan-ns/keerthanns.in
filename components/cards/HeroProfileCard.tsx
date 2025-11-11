@@ -29,7 +29,7 @@ export default function HeroProfileCard() {
                         <div className="flex items-start justify-between h-full flex-col ml-2 md:ml-4">
                             <Badge className="bg-gray-700/60 text-green-300 border-0 px-2 py-1 animate-pulse">
                                 <FaRegDotCircle size={12} className="text-green-400" />
-                                Available to work
+                                Available for freelance
                             </Badge>
                             <h1 className="font-semibold text-xl text-dark-text">
                                 Keerthan NS
@@ -84,3 +84,4 @@ export default function HeroProfileCard() {
         </div>
     );
 }
+
