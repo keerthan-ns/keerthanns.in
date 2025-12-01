@@ -6,7 +6,7 @@ export const socials = {
   linkedin: "https://www.linkedin.com/in/keerthan-ns/",
   twitter: "https://twitter.com/keerthan_ns",
   instagram: "https://instagram.com/keerthan_ns",
-  resume: "https://drive.google.com/file/d/1xLsjvASL_1YQIYaOR1QiOd6NXYdTxZAc/view?usp=sharing"
+  resume: "https://drive.google.com/file/d/1smmUGhB3iuozn2E-AKL3s4GBi5_q4SRu/view?usp=sharing"
 }
 
 export const socialsWithIcons = [
@@ -179,3 +179,4 @@ export const techStacks = [
   { name: 'Jenkins', src: '/static/stacks/jenkins.svg' },
 
 ]
+
