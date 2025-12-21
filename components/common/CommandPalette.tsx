@@ -63,6 +63,13 @@ const commands: Cmd[] = [
         type: "link",
         href: "/work"
     }, {
+        group: "Go to",
+        label: "Blogs",
+        icon: <FaAnglesRight className="mr-2" />,
+        shortcut: "",
+        type: "link",
+        href: "/blog"
+    }, {
         group: "Actions",
         label: "View Resume",
         icon: <IoDocumentText className="mr-2" />,

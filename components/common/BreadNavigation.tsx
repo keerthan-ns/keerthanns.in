@@ -14,11 +14,15 @@ export default function BreadNavigation() {
       name: "Work",
       link: "/work",
     },
+    {
+      name: "Blog",
+      link: "/blog",
+    }
   ];
   const pathname = usePathname();
 
   const isActiveLink = (href: string) => {
-    return pathname === href;
+    return pathname.includes(href);
   };
 
   return (
