@@ -1,6 +1,7 @@
 "use client";
 
-import { Dialog, DialogContent } from "../ui/dialog";
+import { Dialog, DialogContent, DialogTitle } from "../ui/dialog";
+import { VisuallyHidden } from "@radix-ui/react-visually-hidden";
 import {
     Command,
     CommandEmpty,
@@ -152,6 +153,9 @@ export default function CommandPalette() {
             </button>
             <Dialog open={open} onOpenChange={setOpen}>
                 <DialogContent className="p-0 shadow-lg w-full max-w-[calc(100%-2rem)] overflow-hidden bg-[#171717]">
+                    <VisuallyHidden>
+                        <DialogTitle>Command Palette</DialogTitle>
+                    </VisuallyHidden>
                     <Command>
                         <CommandInput placeholder="Search command..." />
                         <CommandList className="visible-scrollbar">
