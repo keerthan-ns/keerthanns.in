@@ -1,0 +1,211 @@
+---
+title: "Designing a URL Shortener Like TinyURL"
+summary: "A practical breakdown of how services like TinyURL work under the hood - from API design to collision-free code generation, scaling with load balancers, and handling massive redirect traffic efficiently."
+publishedAt: "2025-12-28"
+coverImage: "/static/blogs/url-shortner.png"
+tags: ["System Design", "Backend", "Scalability", "Distributed Systems"]
+---
+
+![URL Shortener Architecture](/static/blogs/url-shortener.png)
+
+## Introduction
+
+URL shorteners look deceptively simple - take a long link, generate a tiny one, and redirect users whenever they click it.  
+But behind the scenes, systems like TinyURL or Bitly handle **billions of redirects** and must ensure **zero collisions**, **low latency**, and **high availability**.
+
+Let’s walk through how to design such a system from scratch.
+
+---
+## 1. API Design: Creating and Using Short URLs
+
+At the core, a URL shortener needs just two endpoints:
+
+### **POST `/shorten` - Create a short URL**
+
+A user submits a long URL:
+
+![URL shortner API design](/static/blogs/content/urlshortner-api-design.png)
+<em>URL shortner API design</em>
+
+The server should:
+
+1. Generate a short code  
+2. Store the mapping `{ shortCode → longURL }`  
+3. Return the short URL
+
+**Example request:**
+```curl
+POST /shorten
+Content-Type: application/json
+
+{
+  "url": "https://www.example.com/blog/why-software-scale-matters"
+}
+````
+**Example response:**
+```bash
+{
+  "shortUrl": "https://tiny.ke/AB12cdE"
+}
+```
+
+### **GET `/{code}` - Redirect to the original URL**
+
+When someone clicks the short link:
+
+![Redirect flow placeholder](/static/blogs/urlshortener-redirect.png)
+
+The service:
+
+1.  Looks up the code in the database
+2.  Issues an HTTP 301 redirect to the long URL
+
+**Example response:**
+
+``` http
+HTTP/1.1 301 Moved Permanently
+Location: https://www.example.com/blog/why-software-scale-matters
+```
+
+------------------------------------------------------------------------
+
+## 2. How Long Should a Short Code Be?
+
+A good shortener must generate **unique, compact, and human-friendly
+IDs**.
+
+A popular choice is **base62 encoding**:
+
+-   `a–z` → 26 chars
+-   `A–Z` → 26 chars
+-   `0–9` → 10 chars
+
+Total = **62 characters**
+
+Using a **7-character code** gives:
+
+    62⁷ ≈ 3.5 trillion combinations
+
+------------------------------------------------------------------------
+
+## 3. Scaling: Handling Thousands of Requests per Second
+
+Even with the right code space, **one application server isn't enough**.
+
+At 1000 short-URL creations per second, a single node becomes a
+bottleneck.
+So we scale horizontally:
+
+![Load balancer + servers
+placeholder](/static/blogs/urlshortener-scaling.png)
+
+### Solution: Add more servers behind a load balancer
+
+-   Requests are evenly distributed
+-   Each server can process URL creation in parallel
+-   Throughput increases linearly with the number of servers
+
+But this introduces a new problem...
+
+------------------------------------------------------------------------
+
+## 4. The Collision Problem
+
+When multiple servers generate short codes simultaneously:
+
+![Collision placeholder](/static/blogs/urlshortener-collision.png)
+
+Two servers may create the **same code at the same time**, inserting
+duplicate keys into the database.
+
+Even with base62, collisions are unavoidable unless we enforce
+constraints.
+
+### We need **collision-free code generation** across all servers.
+
+------------------------------------------------------------------------
+
+## 5. Solution: Unique ID Ranges with Zookeeper
+
+To eliminate collisions entirely, use **Zookeeper** to assign each
+server a *non-overlapping numeric range*.
+
+Example:
+
+-   Server 1 → IDs `0–1M`
+-   Server 2 → `1M–2M`
+-   Server 3 → `2M–3M`
+-   ...and so on
+
+![Zookeeper range assignment
+placeholder](/static/blogs/urlshortener-zookeeper.png)
+
+Each server:
+
+1.  Gets its own range
+2.  Maintains a local counter
+3.  Converts the counter to base62
+4.  Inserts the mapping **without checking the database**
+
+Since the ranges never overlap, **collisions are mathematically
+impossible**.
+
+------------------------------------------------------------------------
+
+## 6. End-to-End Flow
+
+Here's how the entire creation pipeline works:
+
+![Full flow placeholder](/static/blogs/urlshortener-fullflow.png)
+
+1.  User calls `POST /shorten`
+2.  Request hits the load balancer
+3.  Load balancer forwards it to any app server
+4.  That server increments its counter
+5.  Converts the number to base62
+6.  Inserts `{ shortCode → longURL }` into Cassandra
+7.  Returns the short URL
+
+------------------------------------------------------------------------
+
+## 7. Handling Redirects Efficiently (100× More Load)
+
+Redirects happen far more often than creations.
+
+If your service creates 1 million URLs per day, it might serve **100
+million redirects**.
+
+Hitting the database for every redirect would be too slow.
+
+### Solution: Add a Redis cache layer
+
+![Redis caching layer placeholder](/static/blogs/urlshortener-cache.png)
+
+Flow:
+
+1.  User clicks short URL
+2.  Load balancer → app server
+3.  Server checks Redis
+    -   **Cache hit?** Return redirect immediately
+    -   **Cache miss?** Query Cassandra
+4.  Cache the result
+5.  Issue 301 redirect
+
+Redis keeps hot URLs in-memory, reducing lookup time to microseconds.
+
+------------------------------------------------------------------------
+
+## Conclusion
+
+A URL shortener may look like a tiny product, but designing it for
+real-world scale involves:
+
+-   Clean API design
+-   Efficient base62 short-code generation
+-   Collision-free distributed ID allocation
+-   Load-balancing across multiple servers
+-   Zookeeper-managed ID ranges
+-   Fast Redis caching for redirect traffic
+
+These patterns apply not just to URL shorteners, but to any system
+dealing with high write-volume + extreme read-volume workloads.
