@@ -8,6 +8,8 @@ import PageLayout from "@/app/layout/PageLayout";
 import BreadNavigation from "@/components/common/BreadNavigation";
 import { Footer } from "@/components/common/Footer";
 import CommandPalette from "@/components/common/CommandPalette";
+import Link from "next/link";
+import { FaAnglesLeft, FaAnglesRight } from "react-icons/fa6";
 
 type BlogPageProps = {
   params: Promise<{ slug: string }>;
@@ -69,6 +71,22 @@ export default async function BlogPost({ params }: BlogPageProps) {
           <div className="mt-8">
             <MDXContent source={content} />
           </div>
+        </div>
+        <div className="flex items-center justify-end gap-2 mt-5">
+          <Link
+            href="/blog"
+            className={`w-fit flex items-center gap-2 bg-slate-400/20 font-medium text-xs text-white rounded-md p-2 px-3 shadow-lg transition-opacity duration-500 hover:bg-primary/90 group`}
+          >
+            <FaAnglesLeft className="transform transition-transform duration-300 group-hover:-translate-x-1" />
+            Go Back
+          </Link>
+          <Link
+            href="/work"
+            className={`w-fit flex items-center gap-2 bg-slate-400/20 font-medium text-xs text-white rounded-md p-2 px-3 shadow-lg transition-opacity duration-500 hover:bg-primary/90 group`}
+          >
+            Read Next
+            <FaAnglesRight className="transform transition-transform duration-300 group-hover:translate-x-1" />
+          </Link>
         </div>
       </div>
       <Footer />
