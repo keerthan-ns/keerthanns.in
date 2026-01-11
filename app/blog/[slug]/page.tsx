@@ -10,6 +10,7 @@ import { Footer } from "@/components/common/Footer";
 import CommandPalette from "@/components/common/CommandPalette";
 import Link from "next/link";
 import { FaAnglesLeft, FaAnglesRight } from "react-icons/fa6";
+import { GoClockFill } from "react-icons/go";
 
 type BlogPageProps = {
   params: Promise<{ slug: string }>;
@@ -66,6 +67,10 @@ export default async function BlogPost({ params }: BlogPageProps) {
           <div className="mt-2 flex items-center gap-4 text-muted-foreground text-sm">
             <span>{data.publishedAt}</span>
             <ViewCounter slug={slug} initialViews={initialViews} />
+            <span className="flex items-center gap-1">
+              <GoClockFill className="h-3.5 w-3.5" />
+              {data.readTime}
+            </span>
           </div>
 
           <div className="mt-8">
@@ -81,7 +86,7 @@ export default async function BlogPost({ params }: BlogPageProps) {
             Go Back
           </Link>
           <Link
-            href="/work"
+            href="/blog"
             className={`w-fit flex items-center gap-2 bg-slate-400/20 font-medium text-xs text-white rounded-md p-2 px-3 shadow-lg transition-opacity duration-500 hover:bg-primary/90 group`}
           >
             Read Next

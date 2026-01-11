@@ -1,7 +1,7 @@
 ---
 title: "Designing a URL Shortener Like TinyURL"
 summary: "A practical breakdown of how services like TinyURL work under the hood - from API design to collision-free code generation, scaling with load balancers, and handling massive redirect traffic efficiently."
-publishedAt: "2025-12-28"
+publishedAt: "2026-01-01"
 coverImage: "/static/blogs/url-shortner.png"
 tags: ["System Design", "Backend", "Scalability", "Distributed Systems"]
 ---
@@ -24,8 +24,10 @@ At the core, a URL shortener needs just two endpoints:
 
 A user submits a long URL:
 
-![URL shortner API design](/static/blogs/content/urlshortner-api-design.png)
-<em>URL shortner API design</em>
+<figure>
+  <img src="/static/blogs/content/urlshortner-api-design.png" alt="URL shortner API design" />
+  <figcaption>Image: URL shortener API design</figcaption>
+</figure>
 
 The server should:
 
@@ -53,7 +55,10 @@ Content-Type: application/json
 
 When someone clicks the short link:
 
-![Redirect flow placeholder](/static/blogs/urlshortener-redirect.png)
+<figure>
+  <img src="/static/blogs/content/urlshortner-redirect.png" alt="Redirection flow" />
+  <figcaption>Image: Redirection when short URL is clicked</figcaption>
+</figure>
 
 The service:
 
@@ -96,8 +101,10 @@ At 1000 short-URL creations per second, a single node becomes a
 bottleneck.
 So we scale horizontally:
 
-![Load balancer + servers
-placeholder](/static/blogs/urlshortener-scaling.png)
+<figure>
+  <img src="/static/blogs/content/urlshortner-scaling.png" alt="Horizontal scaling" />
+  <figcaption>Image: Horizontal scaling using Load balancer</figcaption>
+</figure>
 
 ### Solution: Add more servers behind a load balancer
 
@@ -113,7 +120,10 @@ But this introduces a new problem...
 
 When multiple servers generate short codes simultaneously:
 
-![Collision placeholder](/static/blogs/urlshortener-collision.png)
+<figure>
+  <img src="/static/blogs/content/urlshortner-collision.png" alt="Collision problem" />
+  <figcaption>Image: Collision problem when multiple servers generate same short code</figcaption>
+</figure>
 
 Two servers may create the **same code at the same time**, inserting
 duplicate keys into the database.
@@ -137,8 +147,10 @@ Example:
 -   Server 3 → `2M–3M`
 -   ...and so on
 
-![Zookeeper range assignment
-placeholder](/static/blogs/urlshortener-zookeeper.png)
+<figure>
+  <img src="/static/blogs/content/urlshortner-zookeeper.png" alt="Zookeeper to cordinate the range generation" />
+  <figcaption>Image: Zookeeper to cordinate the range generation</figcaption>
+</figure>
 
 Each server:
 
@@ -156,7 +168,10 @@ impossible**.
 
 Here's how the entire creation pipeline works:
 
-![Full flow placeholder](/static/blogs/urlshortener-fullflow.png)
+<figure>
+  <img src="/static/blogs/content/urlshortner-flow.png" alt="End-to-End flow" />
+  <figcaption>Image: End-to-End flow</figcaption>
+</figure>
 
 1.  User calls `POST /shorten`
 2.  Request hits the load balancer
@@ -179,7 +194,10 @@ Hitting the database for every redirect would be too slow.
 
 ### Solution: Add a Redis cache layer
 
-![Redis caching layer placeholder](/static/blogs/urlshortener-cache.png)
+<figure>
+  <img src="/static/blogs/content/urlshortner-cache.png" alt="Redis cache layer for faster retrieval" />
+  <figcaption>Image: Redis cache layer for faster retrieval</figcaption>
+</figure>
 
 Flow:
 

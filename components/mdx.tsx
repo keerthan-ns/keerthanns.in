@@ -36,6 +36,13 @@ export function MDXContent({ source }: { source: string }) {
 
         /* Images */
         prose-img:rounded-xl
+
+        prose-figure:mx-auto
+        prose-figcaption:text-center
+        prose-figcaption:text-sm
+        prose-figcaption:text-muted-foreground
+        prose-figcaption:mt-2
+        prose-figcaption:italic
       "
     >
       <MDXRemote source={source} />
