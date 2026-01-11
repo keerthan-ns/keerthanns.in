@@ -5,6 +5,42 @@ import { getAllBlogs } from "@/lib/blog";
 import redis from "@/lib/redis";
 import { Footer } from "@/components/common/Footer";
 import CommandPalette from "@/components/common/CommandPalette";
+import type { Metadata } from "next";
+
+const SITE_URL = process.env.NEXT_PUBLIC_BASE_URL || "https://keerthanns.in";
+
+export const metadata: Metadata = {
+  title: "Tech Blogs",
+  description:
+    "Explore in-depth technical articles by Keerthan NS on Next.js, React, Java, full-stack engineering, system design, and real-world software development.",
+  alternates: {
+    canonical: `${SITE_URL}/blog`,
+  },
+  openGraph: {
+    title: "Keerthan NS - Tech Blogs",
+    description:
+      "Read high-quality blog posts covering modern web development, full-stack engineering, system design, interview preparation, and scalable architecture.",
+    url: `${SITE_URL}/blog`,
+    siteName: "Keerthan NS - Portfolio",
+    images: [
+      {
+        url: `${SITE_URL}/static/others/portfolio.png`,
+        width: 1200,
+        height: 630,
+        alt: "Keerthan NS - Tech blogs page",
+      },
+    ],
+    locale: "en_US",
+    type: "website",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Tech Blogs - Keerthan NS",
+    description:
+      "Technical articles covering Next.js, React, full-stack development, Java, system design, and engineering best practices.",
+    images: [`${SITE_URL}/static/others/portfolio.png`],
+  },
+};
 
 export default async function BlogPage() {
   const blogs = getAllBlogs();
