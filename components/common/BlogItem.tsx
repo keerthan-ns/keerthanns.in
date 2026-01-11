@@ -4,7 +4,7 @@ import { IoMdEye } from "react-icons/io";
 import { GoClockFill } from "react-icons/go";
 import { BlogMeta } from "@/types";
 
-export default function BlogItemCard({ blog }: { blog: BlogMeta }) {
+export default function BlogItem({ blog }: { blog: BlogMeta }) {
   return (
     <Link href={`/blog/${blog.slug}`} className="block group">
       <div

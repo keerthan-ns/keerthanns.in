@@ -87,3 +87,8 @@ export function getNextBlog(currentSlug: string) {
 
   return nextBlog ?? null;
 }
+
+export function getLatestBlogs() {
+  const blogs = getAllBlogs();
+  return blogs.slice(0, 2);
+}

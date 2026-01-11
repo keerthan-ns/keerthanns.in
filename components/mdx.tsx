@@ -2,10 +2,6 @@ import { MDXRemote } from "next-mdx-remote/rsc";
 
 export function MDXContent({ source }: { source: string }) {
   return (
-    // <article className="prose dark:prose-invert max-w-none overflow-x-hidden">
-    //   <MDXRemote source={source} />
-    // </article>
-    // <article className="prose dark:prose-slate dark:prose-headings:shadow-lime-300 max-w-none">
     <article
       className="
         prose max-w-none

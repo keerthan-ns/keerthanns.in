@@ -2,7 +2,7 @@
 
 import { useState } from "react";
 import BlogSearch from "@/components/common/BlogSearch";
-import BlogItemCard from "@/components/cards/BlogItemCard";
+import BlogItem from "@/components/common/BlogItem";
 
 type Blog = {
   slug: string;
@@ -33,7 +33,7 @@ export default function BlogList({ blogs }: { blogs: Blog[] }) {
 
       <div className="mt-6 space-y-6">
         {filteredBlogs.map((blog) => (
-          <BlogItemCard key={blog.slug} blog={blog} />
+          <BlogItem key={blog.slug} blog={blog} />
         ))}
 
         {filteredBlogs.length === 0 && (
