@@ -1,4 +1,4 @@
-import { getBlogBySlug, getAllBlogs } from "@/lib/blog";
+import { getBlogBySlug, getAllBlogs, getNextBlog } from "@/lib/blog";
 import { getBlogViews } from "@/lib/blog-stats";
 import ViewCounter from "@/components/common/ViewCounter";
 import { notFound } from "next/navigation";
@@ -18,14 +18,12 @@ type BlogPageProps = {
   params: Promise<{ slug: string }>;
 };
 
-/* ---------- SSG ---------- */
 export async function generateStaticParams() {
   return getAllBlogs().map((blog) => ({
     slug: blog.slug,
   }));
 }
 
-/* ---------- Metadata ---------- */
 export async function generateMetadata(
   { params }: BlogPageProps
 ): Promise<Metadata> {
@@ -79,8 +77,6 @@ export async function generateMetadata(
   }
 }
 
-
-/* ---------- Page ---------- */
 export default async function BlogPost({ params }: BlogPageProps) {
   const { slug } = await params;
 
@@ -93,6 +89,7 @@ export default async function BlogPost({ params }: BlogPageProps) {
 
   const { content, data } = blog;
   const initialViews = await getBlogViews(slug);
+  const nextBlog = getNextBlog(slug);
 
   return (
     <PageLayout>
@@ -124,13 +121,15 @@ export default async function BlogPost({ params }: BlogPageProps) {
             <FaAnglesLeft className="transform transition-transform duration-300 group-hover:-translate-x-1" />
             Go to Blogs
           </Link>
-          <Link
-            href="/blog"
-            className={`w-fit flex items-center gap-2 bg-slate-400/20 font-medium text-xs text-white rounded-md p-2 px-3 shadow-lg transition-opacity duration-500 hover:bg-primary/90 group`}
-          >
-            Read Next
-            <FaAnglesRight className="transform transition-transform duration-300 group-hover:translate-x-1" />
-          </Link>
+          {nextBlog && (
+            <Link
+              href={`/blog/${nextBlog.slug}`}
+              className="w-fit flex items-center gap-2 bg-slate-400/20 font-medium text-xs text-white rounded-md p-2 px-3 shadow-lg transition-opacity duration-500 hover:bg-primary/90 group"
+            >
+              Read Next
+              <FaAnglesRight className="transform transition-transform duration-300 group-hover:translate-x-1" />
+            </Link>
+          )}
         </div>
       </div>
       <Footer />

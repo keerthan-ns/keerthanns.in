@@ -44,7 +44,6 @@ export function getAllBlogs() {
     );
 }
 
-
 export function getBlogBySlug(slug: string) {
   const fullPath = path.join(BLOG_PATH, `${slug}.mdx`);
 
@@ -75,4 +74,16 @@ export function getBlogBySlug(slug: string) {
       publishedAtRaw: data.publishedAt, // optional: keep original
     },
   };
+}
+
+export function getNextBlog(currentSlug: string) {
+  const blogs = getAllBlogs();
+
+  const index = blogs.findIndex((b) => b.slug === currentSlug);
+
+  if (index === -1) return null;
+
+  const nextBlog = blogs[index + 1];
+
+  return nextBlog ?? null;
 }
