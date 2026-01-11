@@ -44,7 +44,6 @@ export function getAllBlogs() {
     );
 }
 
-
 export function getBlogBySlug(slug: string) {
   const fullPath = path.join(BLOG_PATH, `${slug}.mdx`);
 
@@ -53,5 +52,38 @@ export function getBlogBySlug(slug: string) {
   }
 
   const source = fs.readFileSync(fullPath, "utf8");
-  return matter(source);
+  const { content, data } = matter(source);
+
+  // Format date
+  const published = new Date(data.publishedAt);
+  const formattedDate = published.toLocaleDateString("en-US", {
+    month: "short",
+    day: "2-digit",
+    year: "numeric",
+  });
+
+  return {
+    content,
+    data: {
+      ...data,
+      coverImage: data.coverImage,
+      title: data.title,
+      summary: data.summary,
+      readTime: readingTime(content).text,
+      publishedAt: formattedDate,  // ✔ return formatted date
+      publishedAtRaw: data.publishedAt, // optional: keep original
+    },
+  };
+}
+
+export function getNextBlog(currentSlug: string) {
+  const blogs = getAllBlogs();
+
+  const index = blogs.findIndex((b) => b.slug === currentSlug);
+
+  if (index === -1) return null;
+
+  const nextBlog = blogs[index + 1];
+
+  return nextBlog ?? null;
 }
