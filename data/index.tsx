@@ -6,7 +6,7 @@ export const socials = {
   linkedin: "https://www.linkedin.com/in/keerthan-ns/",
   twitter: "https://twitter.com/keerthan_ns",
   instagram: "https://instagram.com/keerthan_ns",
-  resume: "https://drive.google.com/file/d/1cNdD6akQLyO2t0TvrsPCQjo5_-Q5qJA1/view?usp=sharing"
+  resume: "https://drive.google.com/file/d/1EQtuULGASMn0WTBkFZXj7HokMtn99dw8/view?usp=sharing"
 }
 
 export const socialsWithIcons = [
