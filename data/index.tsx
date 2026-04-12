@@ -97,6 +97,13 @@ export const education = [
 
 export const projects = [
   {
+    title: 'NeatBoard (whiteboard-collab)',
+    description: 'A real-time collaborative whiteboard application where teams can draw, brainstorm, and get AI-generated summaries of their sessions with Groq and authentication using Clerk full-stack auth.',
+    github: 'https://github.com/keerthan-ns/collab-whiteboard',
+    link: 'https://neatboard.vercel.app/',
+    img: "https://res.cloudinary.com/dg7etzwks/image/upload/v1775993100/portfolioProjects/collab-whiteboard_ftp67o.png",
+    tags: ['Groq LLaMA', 'Next.js', 'TypeScript', 'Node.js', 'Socket.io', 'Prisma', 'Clerk-auth']
+  }, {
     title: 'Incridea-2023',
     description: 'Website for the annual techno-cultural fest of NMAMIT, called Incridea. Worked in team of 9. The website was visited by over 5000+ people throughout the duration of the fest.',
     github: 'https://github.com/incridea-nmamit/incridea-client/tree/2023',
@@ -154,14 +161,6 @@ export const projects = [
     link: 'https://keerthanns-v1.vercel.app/',
     img: "https://res.cloudinary.com/dg7etzwks/image/upload/v1688752957/portfolioProjects/portPro_b6lsrl.png",
     tags: ['React.js', 'css', 'TailwindCSS', 'Three.js']
-  },
-  {
-    title: 'VChat',
-    description: 'The Vchat(Instagram clone) is a user-friendly web-application. The website has a modern, responsive design, and uses a combination of technologies such as ReactJS and MongoDB to provide a smooth and seamless user experience.',
-    github: 'https://github.com/keerthan-ns/Vchat',
-    link: 'https://vchat-now.vercel.app/',
-    img: "https://res.cloudinary.com/dg7etzwks/image/upload/v1683852442/portfolioProjects/wxp6qwy2qw9beyygziog.png",
-    tags: ['React.js', 'css/scss', 'Django', 'MongoDB']
   }
 ]
 
